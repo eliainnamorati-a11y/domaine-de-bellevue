@@ -1,0 +1,348 @@
+/* Domaine de Bellevue - FR / EN translations.
+ * Edit text here: every key matches a data-i18n / data-i18n-attr attribute in index.html.
+ * Values may contain simple HTML (<br>, <strong>, &amp;). Attribute values (alt, title,
+ * placeholder, aria-label) must be plain text. */
+window.I18N = {
+  "fr": {
+    "meta.title": "Domaine de Bellevue | Villas de luxe près de Nyon",
+    "meta.description": "Nouveau projet immobilier de luxe à Trélex, près de Nyon et Genève : villas neuves de prestige, design contemporain et cadre privilégié. Dernières disponibilités : Villas 1, 2 et 3.",
+    "nav.contact": "Contact",
+    "nav.villas": "Les Villas",
+    "nav.plan": "Plan &amp; Disponibilités",
+    "nav.project": "Le Projet",
+    "nav.architecture": "Architecture",
+    "nav.location": "Situation",
+    "nav.lifestyle": "Art de vivre",
+    "nav.brochure": "Brochure &amp; Plans",
+    "hero.location": "Trélex · Région de Nyon · Dès CHF 2,75M",
+    "hero.title": "Huit villas d’exception<br>sur les hauteurs du Léman",
+    "hero.cta": "Découvrir les villas",
+    "hero.scroll": "Défiler vers le bas",
+    "form.send": "Envoyer",
+    "form.sent": "Envoyé avec succès",
+    "villas.eyebrow": "LES VILLAS",
+    "villas.title": "L’équilibre parfait entre style et confort",
+    "villas.intro": "Dernières opportunités exclusives du domaine, les <strong>Villas 1, 2 et 3</strong> incarnent l’harmonie parfaite entre architecture contemporaine, volumes d'exception et intégration paysagère. Situées en position dominante sur les parcelles les plus généreuses, elles offrent des panoramas uniques sur le lac Léman, les Alpes et la lisière boisée environnante.",
+    "avail.map_alt": "Vue aérienne du Domaine de Bellevue : les Villas 1, 2 et 3 encore disponibles sont mises en évidence",
+    "avail.map_legend": "Villas encore disponibles · Dès CHF 2,75M",
+    "avail.map_hint": "Cliquez sur une villa pour la découvrir",
+    "villa.status": "Disponible · Dès CHF 2,75M",
+    "villa.pdf": "Télécharger les plans (PDF)",
+    "villa1.lead": "Position dominante au sommet du domaine (en haut à gauche du plan). Vaste parcelle privative de 939 m² sans vis-à-vis avec vue panoramique sur le lac Léman et les Alpes.",
+    "villa2.lead": "La plus grande surface construite du domaine (376 m² SBP). Triple orientation Sud / Sud-Ouest et terrasse suspendue de plus de 55 m² prolongeant les pièces de réception.",
+    "villa3.lead": "Adossée au cordon boisé naturel protégé. Vaste parcelle de 541 m² avec sous-sol de plus de 100 m² entièrement personnalisable (wellness, cave, home cinéma).",
+    "villa.zoom": "Cliquer pour agrandir",
+    "v1.img1": "Architecture &amp; façade",
+    "v1.img2": "Vue face",
+    "v1.img3": "Jardin 939 m² (emplacement piscine)",
+    "v2.img1": "Façade sud-ouest",
+    "v2.img2": "Terrasse panoramique",
+    "v2.img3": "Jardin privatif 499 m²",
+    "v3.img1": "Façade &amp; lisière boisée",
+    "v3.img2": "Terrasse &amp; vue lac",
+    "v3.img3": "Jardin privatif 541 m²",
+    "v1.alt1": "Villa 1 - Architecture & Façade Contemporaine",
+    "v1.alt2": "Villa 1 - Vue face",
+    "v1.alt3": "Villa 1 - Terrain 939 m² & Emprise Piscine",
+    "v2.alt1": "Villa 2 - Façade Sud-Ouest Ensoleillée",
+    "v2.alt2": "Villa 2 - Terrasse panoramique sur le domaine et les Alpes",
+    "v2.alt3": "Villa 2 - Jardin privatif de 499 m²",
+    "v3.alt1": "Villa 3 - Façade Contemporaine et Arbres Centenaires",
+    "v3.alt2": "Villa 3 - Terrasse avec vue sur le lac Léman",
+    "v3.alt3": "Villa 3 - Jardin privatif de 541 m²",
+    "spec.sbp": "Surface brute (SBP)",
+    "spec.living": "Surface habitable",
+    "spec.garden": "Jardin privatif",
+    "spec.features": "Aménagements",
+    "spec.terrace": "Terrasse",
+    "spec.basement": "Sous-sol modulable",
+    "spec.pool": "Piscine réalisable",
+    "spec.record": "376 m² (record du domaine)",
+    "loc.hint_title": "Cliquer pour localiser sur le plan interactif",
+    "loc.title": "Emplacement sur le plan",
+    "loc.v1": "Villa 1 • En haut à gauche",
+    "loc.v2": "Villa 2 • En haut au centre",
+    "loc.v3": "Villa 3 • En haut à droite",
+    "loc.hint": "Voir sur le plan général ↓",
+    "loc.alt1": "Emplacement Villa 1 sur plan",
+    "loc.alt2": "Emplacement Villa 2 sur plan",
+    "loc.alt3": "Emplacement Villa 3 sur plan",
+    "plan.eyebrow": "PLAN DU DOMAINE",
+    "plan.title": "Disponibilités &amp; plan interactif",
+    "plan.alt0": "Plan Général Domaine de Bellevue",
+    "plan.alt1": "Lot 1 (en haut à gauche - 939 m²)",
+    "plan.th_sbp": "SBP totale",
+    "plan.th_living": "SBP habitable",
+    "plan.th_garden": "Jardin",
+    "plan.th_price": "Prix",
+    "plan.request": "Dès CHF 2,75M",
+    "plan.reserved": "Réservée",
+    "plan.sold": "Vendue",
+    "plan.pdf1": "Plans officiels Lot 1",
+    "plan.pdf2": "Plans officiels Lot 2",
+    "plan.pdf3": "Plans officiels Lot 3",
+    "plan.note_sbp": "<strong>SBP :</strong> Surface brute de plancher calculée selon les normes cantonales vaudoises.",
+    "plan.disclaimer": "Toutes les informations et visuels présentés sont non-contractuels et fournis à titre d’exemple. Le mobilier et finitions peuvent différer du projet final. Des modifications et adaptations restent réservées jusqu’à l’achèvement de la construction.",
+    "avail.eyebrow": "DISPONIBILITÉ 2027",
+    "avail.title": "Domaine résidentiel exclusif à Trélex",
+    "avail.text": "À une adresse privilégiée de la commune, sur les hauteurs paisibles de Trélex, se déploie un ensemble rare de huit villas d’exception. Conçu comme un véritable domaine privé, ce projet allie raffinement, discrétion et confort haut de gamme. Nichées dans un écrin de verdure, certaines villas profitent même de vues dégagées sur le lac Léman, offrant un cadre de vie à la fois exclusif et harmonieux.",
+    "avail.alt": "Domaine de Bellevue Trélex - Vue Aérienne",
+    "project.eyebrow": "LE PROJET",
+    "project.title": "Un domaine pensé pour vous",
+    "project.text": "Ce domaine résidentiel se distingue par ses espaces généreux, son architecture contemporaine et ses finitions de prestige. Entourées d’arbres et protégées de toute agitation, les villas offrent intimité et sérénité. Chaque bien est conçu pour un art de vivre moderne : volumes lumineux, terrasses privées spacieuses et modularité intelligente. Plus qu’une simple résidence, c’est une communauté élégante et paisible au cœur d’un environnement privilégié.",
+    "project.alt": "Le Projet Domaine de Bellevue",
+    "arch.title": "Des espaces pensés pour vivre avec style et sérénité",
+    "arch.text": "Les villas s’intègrent avec élégance au paysage, mariant lignes modernes et matériaux nobles. Pierres naturelles, baies vitrées panoramiques et finitions haut de gamme façonnent des intérieurs intemporels où chaque détail respire qualité et sophistication. Les espaces de vie sont ouverts sur la nature environnante, créant une symbiose entre confort intérieur et beauté extérieure.",
+    "arch.alt": "Architecture & Design de Prestige",
+    "loc.eyebrow": "Expérience résidentielle exclusive à Trélex",
+    "loc.text1": "Situé dans un quartier résidentiel recherché et calme, ce domaine combine proximité avec la nature et accessibilité urbaine. À seulement quelques minutes de Nyon, et moins de 20 minutes de l’aéroport international de Genève, les résidents profitent d’un emplacement stratégique. Lausanne et Genève sont facilement accessibles, tout comme les stations de ski du Jura et des Alpes.",
+    "loc.text2": "À deux pas, le Parcours Vita (7 minutes à pied), les forêts et vignobles invitent à la détente et aux activités en plein air. Les familles apprécieront la proximité de prestigieuses écoles locales et internationales, offrant aussi bien la Maturité suisse que des diplômes internationaux reconnus, garantissant un cadre scolaire d’excellence pour leurs enfants.",
+    "loc.car": "En voiture",
+    "loc.transport": "Transports publics",
+    "loc.car_alt": "Voiture",
+    "loc.transport_alt": "Transports publics",
+    "loc.airport": "Genève Aéroport",
+    "loc.hour": "1 h",
+    "loc.school": "École Moser",
+    "loc.alt": "Vue Aérienne Domaine de Bellevue",
+    "life.eyebrow": "STYLE DE VIE",
+    "life.title": "Art de vivre",
+    "life.prev": "Précédent",
+    "life.next": "Suivant",
+    "life.h1": "UN QUARTIER VIVANT",
+    "life.p1": "À proximité de Trélex, profitez d’une grande variété de restaurants et de cafés, mais aussi de commerces, services et lieux de convivialité. Les villes voisines dans la région de Nyon, Genève et Lausanne enrichissent encore l’offre avec une scène culturelle, gastronomique et sociale riche et diversifiée.",
+    "life.h2": "CADRE DE VIE FAMILIAL",
+    "life.p2": "La proximité d’écoles de haute qualité facilite le quotidien des parents et rassure sur l’avenir des enfants. Une offre variée d’activités, entre sport, culture et espaces verts, crée un cadre sûr et agréable où les plus jeunes peuvent s’épanouir pleinement.",
+    "life.h3": "UNE RÉGION AUX MILLE PLAISIRS",
+    "life.p3": "Entre lac et montagnes, la région invite à la détente et à l’aventure. Sports nautiques sur le Léman, randonnées alpines, balades à vélo dans la campagne vaudoise et, en hiver, les pistes de ski de St-Cergue à seulement 15 minutes offrent une qualité de vie unique au rythme des saisons.",
+    "life.h4": "AU CŒUR DE LA NATURE",
+    "life.p4": "Parcours Vita Trélex, à seulement 5 minutes à pied, s’ajoute aux autres parcs et espaces verts des environs, offrant un cadre idéal pour l’exercice, la détente et les activités en plein air. La proximité immédiate de la nature et de la forêt offre un cadre idéal pour les personnes avec des animaux de compagnie et invite à de belles promenades en plein air.",
+    "life.alt1": "Un quartier vivant",
+    "life.alt2": "Cadre de vie familial",
+    "life.alt3": "Une région aux mille plaisirs",
+    "life.alt4": "Au cœur de la nature",
+    "dl": "TÉLÉCHARGER",
+    "contact.title": "Prenons contact",
+    "form.first": "Prénom",
+    "form.last": "Nom",
+    "form.phone": "Téléphone",
+    "form.privacy": "J’accepte la politique de confidentialité",
+    "advisor.eyebrow": "Conseil et vente",
+    "advisor.text": "Silverpine SA est une société d’investissement familiale suisse basée à Nidwald, qui développe des projets immobiliers de premier plan dans le canton de Vaud et en Suisse centrale. Chaque projet est conduit avec précision et engagement, garantissant progrès constant, qualité irréprochable et transparence totale. Au cœur de notre philosophie se trouvent des relations durables avec nos clients et partenaires, fondées sur la confiance, l’intégrité et la collaboration. Nos villas et appartements marient une architecture intemporelle à un confort moderne, pour offrir des lieux de vie uniques et inspirants. Conçus avec des matériaux durables de la plus haute qualité, ils garantissent une valeur pérenne et un bien-être exceptionnel, que ce soit pour des familles ou des particuliers.",
+    "advisor.role": "Responsable des projets",
+    "partners": "PARTENAIRES",
+    "footer.privacy": "Politique de confidentialité",
+    "lb.close": "Fermer la vue agrandie",
+    "lb.alt": "Vue agrandie",
+    "lb.prev": "&#10094; Précédent",
+    "lb.next": "Suivant &#10095;",
+    "loc.geneva": "Genève"
+  },
+  "en": {
+    "meta.title": "Domaine de Bellevue | Luxury Villas near Nyon",
+    "meta.description": "New luxury residential project in Trélex, near Nyon and Geneva: prestigious new-build villas, contemporary design and an exceptional setting. Last availabilities: Villas 1, 2 and 3.",
+    "nav.contact": "Contact",
+    "nav.villas": "The Villas",
+    "nav.plan": "Site Plan &amp; Availability",
+    "nav.project": "The Project",
+    "nav.architecture": "Architecture",
+    "nav.location": "Location",
+    "nav.lifestyle": "Lifestyle",
+    "nav.brochure": "Brochure &amp; Plans",
+    "hero.location": "Trélex · Nyon Region · From CHF 2.75M",
+    "hero.title": "Eight exceptional villas<br>above Lake Geneva",
+    "hero.cta": "Discover the villas",
+    "hero.scroll": "Scroll down",
+    "form.send": "Send",
+    "form.sent": "Sent successfully",
+    "villas.eyebrow": "THE VILLAS",
+    "villas.title": "The perfect balance between style and comfort",
+    "villas.intro": "The last exclusive opportunities on the estate, <strong>Villas 1, 2 and 3</strong> embody the perfect harmony of contemporary architecture, exceptional volumes and landscape integration. Set in a commanding position on the most generous plots, they offer unique views over Lake Geneva, the Alps and the surrounding woodland.",
+    "avail.map_alt": "Aerial view of Domaine de Bellevue: Villas 1, 2 and 3, still available, are highlighted",
+    "avail.map_legend": "Villas still available · From CHF 2.75M",
+    "avail.map_hint": "Click a villa to explore it",
+    "villa.status": "Available · From CHF 2.75M",
+    "villa.pdf": "Download plans (PDF)",
+    "villa1.lead": "Commanding position at the top of the estate (top left of the plan). A vast, unoverlooked 939 m² private plot with panoramic views of Lake Geneva and the Alps.",
+    "villa2.lead": "The largest built area on the estate (376 m² SBP). Triple south / south-west aspect and a suspended terrace of more than 55 m² extending the reception rooms.",
+    "villa3.lead": "Backing onto a protected natural woodland belt. A generous 541 m² plot with a basement of more than 100 m², fully customisable (wellness, wine cellar, home cinema).",
+    "villa.zoom": "Click to enlarge",
+    "v1.img1": "Architecture &amp; façade",
+    "v1.img2": "Front view",
+    "v1.img3": "939 m² garden (pool area)",
+    "v2.img1": "South-west façade",
+    "v2.img2": "Panoramic terrace",
+    "v2.img3": "499 m² private garden",
+    "v3.img1": "Façade &amp; woodland edge",
+    "v3.img2": "Terrace &amp; lake view",
+    "v3.img3": "541 m² private garden",
+    "v1.alt1": "Villa 1 - Contemporary architecture & façade",
+    "v1.alt2": "Villa 1 - Front view",
+    "v1.alt3": "Villa 1 - 939 m² plot & pool area",
+    "v2.alt1": "Villa 2 - Sunny south-west façade",
+    "v2.alt2": "Villa 2 - Panoramic terrace over the estate and the Alps",
+    "v2.alt3": "Villa 2 - 499 m² private garden",
+    "v3.alt1": "Villa 3 - Contemporary façade and century-old trees",
+    "v3.alt2": "Villa 3 - Terrace with view of Lake Geneva",
+    "v3.alt3": "Villa 3 - 541 m² private garden",
+    "spec.sbp": "Gross floor area (SBP)",
+    "spec.living": "Living area",
+    "spec.garden": "Private garden",
+    "spec.features": "Features",
+    "spec.terrace": "Terrace",
+    "spec.basement": "Flexible basement",
+    "spec.pool": "Pool possible",
+    "spec.record": "376 m² (largest on the estate)",
+    "loc.hint_title": "Click to locate on the interactive site plan",
+    "loc.title": "Location on site plan",
+    "loc.v1": "Villa 1 • Top left",
+    "loc.v2": "Villa 2 • Top centre",
+    "loc.v3": "Villa 3 • Top right",
+    "loc.hint": "View on the site plan ↓",
+    "loc.alt1": "Location of Villa 1 on the plan",
+    "loc.alt2": "Location of Villa 2 on the plan",
+    "loc.alt3": "Location of Villa 3 on the plan",
+    "plan.eyebrow": "SITE PLAN",
+    "plan.title": "Availability &amp; interactive site plan",
+    "plan.alt0": "Domaine de Bellevue site plan",
+    "plan.alt1": "Lot 1 (top left - 939 m²)",
+    "plan.th_sbp": "Total SBP",
+    "plan.th_living": "Living SBP",
+    "plan.th_garden": "Garden",
+    "plan.th_price": "Price",
+    "plan.request": "From CHF 2.75M",
+    "plan.reserved": "Reserved",
+    "plan.sold": "Sold",
+    "plan.pdf1": "Official plans, Lot 1",
+    "plan.pdf2": "Official plans, Lot 2",
+    "plan.pdf3": "Official plans, Lot 3",
+    "plan.note_sbp": "<strong>SBP:</strong> Gross floor area calculated according to the cantonal standards of Vaud.",
+    "plan.disclaimer": "All information and visuals shown are non-contractual and provided for illustration only. Furniture and finishes may differ from the final project. Changes and adjustments remain reserved until completion of construction.",
+    "avail.eyebrow": "AVAILABLE IN 2027",
+    "avail.title": "An exclusive residential estate in Trélex",
+    "avail.text": "At a privileged address on the peaceful heights of Trélex lies a rare ensemble of eight exceptional villas. Conceived as a true private estate, the project combines refinement, discretion and high-end comfort. Nestled in greenery, some villas even enjoy open views of Lake Geneva, offering a living environment that is both exclusive and harmonious.",
+    "avail.alt": "Domaine de Bellevue Trélex - aerial view",
+    "project.eyebrow": "THE PROJECT",
+    "project.title": "An estate designed for you",
+    "project.text": "This residential estate stands out for its generous spaces, contemporary architecture and prestigious finishes. Surrounded by trees and sheltered from any bustle, the villas offer privacy and serenity. Each home is designed for modern living: bright volumes, spacious private terraces and intelligent flexibility. More than just a residence, it is an elegant and peaceful community at the heart of an exceptional setting.",
+    "project.alt": "The Domaine de Bellevue project",
+    "arch.title": "Spaces designed for living with style and serenity",
+    "arch.text": "The villas blend elegantly into the landscape, combining modern lines with noble materials. Natural stone, panoramic glazing and high-end finishes shape timeless interiors where every detail exudes quality and sophistication. Living spaces open onto the surrounding nature, creating a symbiosis between indoor comfort and outdoor beauty.",
+    "arch.alt": "Prestige architecture &amp; design",
+    "loc.eyebrow": "An exclusive residential experience in Trélex",
+    "loc.text1": "Located in a sought-after, quiet residential area, the estate combines proximity to nature with easy access to the city. Just a few minutes from Nyon and less than 20 minutes from Geneva International Airport, residents enjoy a strategic location. Lausanne and Geneva are easily reached, as are the ski resorts of the Jura and the Alps.",
+    "loc.text2": "Close by, the Parcours Vita fitness trail (7 minutes on foot), forests and vineyards invite relaxation and outdoor activities. Families will appreciate the proximity of prestigious local and international schools, offering both the Swiss Maturité and recognised international diplomas, ensuring an excellent educational environment for their children.",
+    "loc.car": "By car",
+    "loc.transport": "Public transport",
+    "loc.car_alt": "Car",
+    "loc.transport_alt": "Public transport",
+    "loc.airport": "Geneva Airport",
+    "loc.hour": "1 hr",
+    "loc.school": "Ecole Moser",
+    "loc.alt": "Aerial view of Domaine de Bellevue",
+    "life.eyebrow": "LIFESTYLE",
+    "life.title": "The art of living",
+    "life.prev": "Previous",
+    "life.next": "Next",
+    "life.h1": "A VIBRANT NEIGHBOURHOOD",
+    "life.p1": "Near Trélex, enjoy a wide choice of restaurants and cafés, as well as shops, services and places to meet. The neighbouring towns of the Nyon region, Geneva and Lausanne add a rich and diverse cultural, culinary and social scene.",
+    "life.h2": "A FAMILY-FRIENDLY SETTING",
+    "life.p2": "High-quality schools nearby make everyday life easier for parents and reassure them about their children’s future. A wide range of activities — sport, culture and green spaces — creates a safe and pleasant environment where young people can thrive.",
+    "life.h3": "A REGION OF A THOUSAND PLEASURES",
+    "life.p3": "Between lake and mountains, the region invites both relaxation and adventure. Water sports on Lake Geneva, Alpine hikes, bike rides through the Vaud countryside and, in winter, the ski slopes of St-Cergue just 15 minutes away offer a unique quality of life through the seasons.",
+    "life.h4": "IN THE HEART OF NATURE",
+    "life.p4": "The Parcours Vita Trélex, just a 5-minute walk away, joins the other parks and green spaces nearby, offering an ideal setting for exercise, relaxation and outdoor activities. The immediate proximity of nature and forest is ideal for pet owners and invites lovely walks in the open air.",
+    "life.alt1": "A vibrant neighbourhood",
+    "life.alt2": "A family-friendly setting",
+    "life.alt3": "A region of a thousand pleasures",
+    "life.alt4": "In the heart of nature",
+    "dl": "DOWNLOAD",
+    "contact.title": "Get in touch",
+    "form.first": "First name",
+    "form.last": "Last name",
+    "form.phone": "Phone",
+    "form.privacy": "I accept the privacy policy",
+    "advisor.eyebrow": "Advice &amp; sales",
+    "advisor.text": "Silverpine SA is a Swiss family-owned investment company based in Nidwalden, developing premier real estate projects in the canton of Vaud and Central Switzerland. Each project is carried out with precision and commitment, ensuring steady progress, impeccable quality and complete transparency. At the heart of our philosophy are lasting relationships with our clients and partners, built on trust, integrity and collaboration. Our villas and apartments combine timeless architecture with modern comfort to create unique and inspiring places to live. Built with sustainable materials of the highest quality, they guarantee lasting value and exceptional well-being, for families and individuals alike.",
+    "advisor.role": "Head of Projects",
+    "partners": "PARTNERS",
+    "footer.privacy": "Privacy policy",
+    "lb.close": "Close enlarged view",
+    "lb.alt": "Enlarged view",
+    "lb.prev": "&#10094; Previous",
+    "lb.next": "Next &#10095;",
+    "loc.geneva": "Geneva"
+  }
+};
+
+/* ---- Language switcher runtime (FR default, EN optional) ----
+ * Priority: ?lang=en in URL  >  last choice (localStorage)  >  French.
+ */
+(function () {
+  var STORAGE_KEY = 'ddb-lang';
+  var dict = window.I18N || {};
+  var current = 'fr';
+
+  function t(key, lang) {
+    lang = lang || current;
+    if (dict[lang] && dict[lang][key] != null) return dict[lang][key];
+    return (dict.fr && dict.fr[key] != null) ? dict.fr[key] : '';
+  }
+
+  function apply(lang) {
+    if (!dict[lang]) lang = 'fr';
+    current = lang;
+    document.documentElement.lang = lang === 'fr' ? 'fr-CH' : 'en';
+
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var v = t(el.getAttribute('data-i18n'), lang);
+      if (v) el.innerHTML = v;
+    });
+
+    document.querySelectorAll('[data-i18n-attr]').forEach(function (el) {
+      el.getAttribute('data-i18n-attr').split(';').forEach(function (pair) {
+        var parts = pair.split(':');
+        if (parts.length < 2) return;
+        var v = t(parts[1].trim(), lang);
+        if (v) el.setAttribute(parts[0].trim(), v);
+      });
+    });
+
+    document.title = t('meta.title', lang).replace(/&amp;/g, '&');
+    var md = document.querySelector('meta[name="description"]');
+    if (md) md.setAttribute('content', t('meta.description', lang));
+
+    document.querySelectorAll('.lang-btn').forEach(function (b) {
+      var on = b.getAttribute('data-lang') === lang;
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+    try {
+      var url = new URL(window.location.href);
+      if (lang === 'fr') url.searchParams.delete('lang'); else url.searchParams.set('lang', lang);
+      window.history.replaceState(null, '', url);
+    } catch (e) {}
+  }
+
+  function initialLang() {
+    try {
+      var p = new URLSearchParams(window.location.search).get('lang');
+      if (p && dict[p]) return p;
+    } catch (e) {}
+    try {
+      var s = localStorage.getItem(STORAGE_KEY);
+      if (s && dict[s]) return s;
+    } catch (e) {}
+    return 'fr';
+  }
+
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest && e.target.closest('.lang-btn');
+    if (btn) apply(btn.getAttribute('data-lang'));
+  });
+
+  window.i18n = { t: function (k) { return t(k); }, apply: apply, get lang() { return current; } };
+  apply(initialLang());
+})();

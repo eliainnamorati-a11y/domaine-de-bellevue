@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="fr-CH">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domaine de Bellevue | Villas de Luxe près de Nyon</title>
+  <meta name="description" content="Nouveau projet immobilier de luxe à Trélex, près de Nyon et Genève : villas neuves de prestige, design contemporain et cadre privilégié. Dernières disponibilités : Villas 1, 2 et 3.">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/domaine-de-bellevue-logo_LOGO.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & HAMBURGER (Fixed Header with Logo)
+       ========================================== -->
+  <header id="domain-header">
+    <div class="header-row">
+      <div class="col-left">
+        <button class="hamburger-btn" id="menu-toggle" type="button" aria-label="Menu">
+          <span class="hamburger">
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+          </span>
+        </button>
+      </div>
+
+      <div class="col-center">
+        <a href="#hero" id="site-logo">
+          <img src="assets/domaine-de-bellevue-logo_LOGO.svg" alt="Domaine de Bellevue" title="Domaine de Bellevue">
+        </a>
+      </div>
+
+      <div class="col-right">
+        <div class="lang-switch" role="group" aria-label="Langue / Language">
+          <button type="button" class="lang-btn is-active" data-lang="fr" aria-pressed="true">FR</button>
+          <span class="lang-sep" aria-hidden="true">|</span>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a id="special-btn" href="#contact" data-i18n="nav.contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       FULLSCREEN OVERLAY MENU
+       ========================================== -->
+  <div id="domain-overlay">
+    <nav class="overlay-menu">
+      <a class="overlay-link" href="#villas" data-i18n="nav.villas">Les Villas</a>
+      <a class="overlay-link" href="#plan" data-i18n="nav.plan">Plan &amp; Disponibilités</a>
+      <a class="overlay-link" href="#projet" data-i18n="nav.project">Le Projet</a>
+      <a class="overlay-link" href="#architecture" data-i18n="nav.architecture">Architecture</a>
+      <a class="overlay-link" href="#situation" data-i18n="nav.location">Situation</a>
+      <a class="overlay-link" href="#lifestyle" data-i18n="nav.lifestyle">Art de vivre</a>
+      <a class="overlay-link" href="#brochure" data-i18n="nav.brochure">Brochure &amp; Plans</a>
+      <a class="overlay-link" href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+  </div>
+
+  <!-- ==========================================
+       FULLSCREEN SLIDESHOW HERO (simple)
+       ========================================== -->
+  <div id="fullscreen-slideshow">
+    <div class="slide first-visible active" style="background-image:url('assets/hero1.jpg');"></div>
+    <div class="slide" style="background-image:url('assets/hero2.jpg');"></div>
+    <div class="slide" style="background-image:url('assets/hero3-scaled.jpg');"></div>
+    <div class="slide" style="background-image:url('assets/hero4.jpg');"></div>
+    <div class="slide" style="background-image:url('assets/hero5.jpg');"></div>
+
+    <div class="hero-overlay-center">
+      <div class="hero-content-wrapper">
+        <span class="hero-location" data-i18n="hero.location">Trélex · Région de Nyon · Dès CHF 2,75M</span>
+        <h1 class="hero-main-title" data-i18n="hero.title">Huit villas d’exception<br>sur les hauteurs du Léman</h1>
+        <a href="#villas" class="hero-btn-simple" data-i18n="hero.cta">Découvrir les villas</a>
+      </div>
+      <a href="#villas" class="hero-scroll-cue" data-i18n-attr="aria-label:hero.scroll" aria-label="Défiler vers le bas"></a>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       1. THE VILLAS: THE PERFECT BALANCE BETWEEN STYLE AND COMFORT
+       Showcase of Available Villas 1, 2 & 3
+       ========================================== -->
+  <section id="villas" class="signature-section">
+    <div class="container text-center">
+      <h2 class="sub-title" data-i18n="villas.eyebrow">LES VILLAS</h2>
+      <h1 class="main-title" data-i18n="villas.title">L’équilibre parfait entre style et confort</h1>
+      <p class="section-text" data-i18n="villas.intro">Dernières opportunités exclusives du domaine, les <strong>Villas 1, 2 et 3</strong> incarnent l’harmonie parfaite entre architecture contemporaine, volumes d'exception et intégration paysagère. Situées en position dominante sur les parcelles les plus généreuses, elles offrent des panoramas uniques sur le lac Léman, les Alpes et la lisière boisée environnante.</p>
+
+      <!-- Aerial view: the 3 villas still available are highlighted -->
+      <figure class="villas-availability-map">
+        <div class="vam-frame">
+          <img src="assets/villas-disponibles-aerien-1200.webp"
+               srcset="assets/villas-disponibles-aerien-1200.webp 1200w, assets/villas-disponibles-aerien-2400.webp 2400w"
+               sizes="(max-width: 1240px) 100vw, 1200px" loading="lazy" width="2400" height="1340"
+               data-i18n-attr="alt:avail.map_alt" alt="Vue aérienne du Domaine de Bellevue : les Villas 1, 2 et 3 encore disponibles sont mises en évidence">
+          <a class="vam-pin" href="#villa-card-1" style="left:28.1%;top:39%;"><span class="vam-pin-word">Villa</span>1</a>
+          <a class="vam-pin" href="#villa-card-2" style="left:41%;top:34%;"><span class="vam-pin-word">Villa</span>2</a>
+          <a class="vam-pin" href="#villa-card-3" style="left:58.8%;top:40%;"><span class="vam-pin-word">Villa</span>3</a>
+        </div>
+        <figcaption class="vam-caption">
+          <span class="vam-legend"><span class="vam-swatch" aria-hidden="true"></span><span data-i18n="avail.map_legend">Villas encore disponibles · Dès CHF 2,75M</span></span>
+          <span class="vam-hint" data-i18n="avail.map_hint">Cliquez sur une villa pour la découvrir</span>
+        </figcaption>
+      </figure>
+
+      <div class="villas-stacked-showcase">
+        <!-- ==================== VILLA 1 ==================== -->
+        <div class="villa-stacked-block" id="villa-card-1" data-lot="1">
+          <!-- Top Row: Title, Badge, Positioning Note, and PDF Button -->
+          <div class="villa-stacked-header">
+            <div class="villa-header-left">
+              <div class="villa-title-row">
+                <h2 class="villa-stacked-name">Villa 1</h2>
+                <span class="villa-status-chip available" data-i18n="villa.status">Disponible · Dès CHF 2,75M</span>
+              </div>
+              <p class="villa-stacked-lead" data-i18n="villa1.lead">Position dominante au sommet du domaine (en haut à gauche du plan). Vaste parcelle privative de 939 m² sans vis-à-vis avec vue panoramique sur le lac Léman et les Alpes.</p>
+            </div>
+            <div class="villa-header-right">
+              <a href="docs/Domaine-de-Bellevue-Lot-1-.pdf" target="_blank" class="villa-btn-pdf-stacked" data-i18n="villa.pdf">Télécharger les plans (PDF)</a>
+            </div>
+          </div>
+
+          <!-- Middle Row: 3 Images Visible Simultaneously Side-by-Side (NO SCROLLING) -->
+          <div class="villa-images-triptych">
+            <div class="triptych-item" data-i18n-attr="title:villa.zoom" title="Cliquer pour agrandir">
+              <img src="assets/hero1.jpg" data-i18n-attr="alt:v1.alt1" alt="Villa 1 - Architecture &amp; Façade Contemporaine">
+              <span class="triptych-label" data-i18n="v1.img1">Architecture &amp; façade</span>
+              <div class="triptych-zoom-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              </div>
+            </div>
+            <div class="triptych-item" data-i18n-attr="title:villa.zoom" title="Cliquer pour agrandir">
+              <img src="assets/villa-1-terrasse.webp" data-i18n-attr="alt:v1.alt2" alt="Villa 1 - Terrasse vitrée et jardin privatif">
+              <span class="triptych-label" data-i18n="v1.img2">Vue face</span>
+              <div class="triptych-zoom-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              </div>
+            </div>
+            <div class="triptych-item" data-i18n-attr="title:villa.zoom" title="Cliquer pour agrandir">
+              <img src="assets/le-project.jpg" data-i18n-attr="alt:v1.alt3" alt="Villa 1 - Terrain 939 m² &amp; Emprise Piscine">
+              <span class="triptych-label" data-i18n="v1.img3">Jardin 939 m² (emplacement piscine)</span>
+              <div class="triptych-zoom-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Row: Specs Grid + Mini Lot Locator Map -->
+          <div class="villa-stacked-footer">
+            <div class="stacked-specs-grid">
+              <div class="spec-tile">
+                <span class="spec-label" data-i18n="spec.sbp">Surface brute (SBP)</span>
+                <span class="spec-val">372 m²</span>
+              </div>
+              <div class="spec-tile">
+                <span class="spec-label" data-i18n="spec.living">Surface habitable</span>
+                <span class="spec-val">198 m²</span>
+              </div>
+              <div class="spec-tile highlight">
+                <span class="spec-label" data-i18n="spec.garden">Jardin privatif</span>
+                <span class="spec-val">939 m²</span>
+              </div>
+              <div class="spec-tile">
+                <span class="spec-label" data-i18n="spec.features">Aménagements</span>
+                <span class="spec-val" data-i18n="spec.pool">Piscine réalisable</span>
+              </div>
+            </div>
+            <div class="stacked-locator-box prominent" data-i18n-attr="title:loc.hint_title" title="Cliquer pour localiser sur le plan interactif">
+              <div class="locator-thumb-wrap">
+                <img src="assets/atelier-project3.webp" data-i18n-attr="alt:loc.alt1" alt="Emplacement Villa 1 sur plan">
+              </div>
+              <div class="locator-info">
+                <span class="locator-title" data-i18n="loc.title">Emplacement sur le plan</span>
+                <strong class="locator-name" data-i18n="loc.v1">Villa 1 • En haut à gauche</strong>
+                <span class="locator-hint" data-i18n="loc.hint">Voir sur le plan général ↓</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== VILLA 2 ==================== -->
+        <div class="villa-stacked-block" id="villa-card-2" data-lot="2">
+          <!-- Top Row: Title, Badge, Positioning Note, and PDF Button -->
+          <div class="villa-stacked-header">
+            <div class="villa-header-left">
+              <div class="villa-title-row">
+                <h2 class="villa-stacked-name">Villa 2</h2>
+                <span class="villa-status-chip available" data-i18n="villa.status">Disponible · Dès CHF 2,75M</span>
+              </div>
+              <p class="villa-stacked-lead" data-i18n="villa2.lead">La plus grande surface construite du domaine (376 m² SBP). Triple orientation Sud / Sud-Ouest et terrasse suspendue de plus de 55 m² prolongeant les pièces de réception.</p>
+            </div>
+            <div class="villa-header-right">
+              <a href="docs/Domaine-de-Bellevue-Lot-2.pdf" target="_blank" class="villa-btn-pdf-stacked" data-i18n="villa.pdf">Télécharger les plans (PDF)</a>
+            </div>
+          </div>
+
+          <!-- Middle Row: 3 Images Visible Simultaneously Side-by-Side (NO SCROLLING) -->
+          <div class="villa-images-triptych">
+            <div class="triptych-item" data-i18n-attr="title:villa.zoom" title="Cliquer pour agrandir">
+              <img src="assets/hero4.jpg" data-i18n-attr="alt:v2.alt1" alt="Villa 2 - Façade Sud-Ouest Ensoleillée">
+              <span class="triptych-label" data-i18n="v2.img1">Façade sud-ouest</span>
+              <div class="triptych-zoom-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              </div>
+            </div>
+            <div class="triptych-item" data-i18n-attr="title:villa.zoom" title="Cliquer pour agrandir">
+              <img src="assets/villa-2-terrasse.webp" data-i18n-attr="alt:v2.alt2" alt="Villa 2 - Terrasse panoramique sur le domaine et les Alpes">
+              <span class="triptych-label" data-i18n="v2.img2">Terrasse panoramique</span>
+              <div class="triptych-zoom-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              </div>
+            </div>
+            <div class="triptych-item" data-i18n-attr="title:villa.zoom" title="Cliquer pour agrandir">
+              <img src="assets/villa-2-jardin.webp" data-i18n-attr="alt:v2.alt3" alt="Villa 2 - Jardin privatif de 499 m²">
+              <span class="triptych-label" data-i18n="v2.img3">Jardin privatif 499 m²</span>
+              <div class="triptych-zoom-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Row: Specs Grid + Mini Lot Locator Map -->
+          <div class="villa-stacked-footer">
+            <div class="stacked-specs-grid">
+              <div class="spec-tile highlight">
+                <span class="spec-label" data-i18n="spec.sbp">Surface brute (SBP)</span>
+                <span class="spec-val" data-i18n="spec.record">376 m² (record du domaine)</span>
+              </div>
+              <div class="spec-tile">
+                <span class="spec-label" data-i18n="spec.living">Surface habitable</span>
+                <span class="spec-val">201 m²</span>
+              </div>
+              <div class="spec-tile">
+                <span class="spec-label" data-i18n="spec.garden">Jardin privatif</span>
+                <span class="spec-val">499 m²</span>
+              </div>
+              <div class="spec-tile">
+                <span class="spec-label" data-i18n="spec.terrace">Terrasse</span>
+                <span class="spec-val">&gt; 55 m²</span>
+              </div>
+            </div>
+            <div class="stacked-locator-box prominent" data-i18n-attr="title:loc.hint_title" title="Cliquer pour localiser sur le plan interactif">
+              <div class="locator-thumb-wrap">
+                <img src="assets/atelier-project4.webp" data-i18n-attr="alt:loc.alt2" alt="Emplacement Villa 2 sur plan">
+              </div>
+              <div class="locator-info">
+                <span class="locator-title" data-i18n="loc.title">Emplacement sur le plan</span>
+                <strong class="locator-name" data-i18n="loc.v2">Villa 2 • En haut au centre</strong>
+                <span class="locator-hint" data-i18n="loc.hint">Voir sur le plan général ↓</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== VILLA 3 ==================== -->
+        <div class="villa-stacked-block" id="villa-card-3" data-lot="3">
+          <!-- Top Row: Title, Badge, Positioning Note, and PDF Button -->
+          <div class="villa-stacked-header">
+            <div class="villa-header-left">
+              <div class="villa-title-row">
+                <h2 class="villa-stacked-name">Villa 3</h2>
+                <span class="villa-status-chip available" data-i18n="villa.status">Disponible · Dès CHF 2,75M</span>
+              </div>
+              <p class="villa-stacked-lead" data-i18n="villa3.lead">Adossée au cordon boisé naturel protégé. Vaste parcelle de 541 m² avec sous-sol de plus de 100 m² entièrement personnalisable (wellness, cave, home cinéma).</p>
+            </div>
+            <div class="villa-header-right">
+              <a href="docs/Domaine-de-Bellevue-Lot-3.pdf" target="_blank" class="villa-btn-pdf-stacked" data-i18n="villa.pdf">Télécharger les plans (PDF)</a>
+            </div>
+          </div>
+
+          <!-- Middle Row: 3 Images Visible Simultaneously Side-by-Side (NO SCROLLING) -->
+          <div class="villa-images-triptych">
+            <div class="triptych-item" data-i18n-attr="title:villa.zoom" title="Cliquer pour agrandir">
+              <img src="assets/hero2.jpg" data-i18n-attr="alt:v3.alt1" alt="Villa 3 - Façade Contemporaine et Arbres Centenaires">
+              <span class="triptych-label" data-i18n="v3.img1">Façade &amp; lisière boisée</span>
+              <div class="triptych-zoom-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              </div>
+            </div>
+            <div class="triptych-item" data-i18n-attr="title:villa.zoom" title="Cliquer pour agrandir">
+              <img src="assets/villa-3-terrasse.webp" data-i18n-attr="alt:v3.alt2" alt="Villa 3 - Terrasse avec vue sur le lac Léman">
+              <span class="triptych-label" data-i18n="v3.img2">Terrasse &amp; vue lac</span>
+              <div class="triptych-zoom-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              </div>
+            </div>
+            <div class="triptych-item" data-i18n-attr="title:villa.zoom" title="Cliquer pour agrandir">
+              <img src="assets/villa-3-jardin.webp" data-i18n-attr="alt:v3.alt3" alt="Villa 3 - Jardin privatif de 541 m²">
+              <span class="triptych-label" data-i18n="v3.img3">Jardin privatif 541 m²</span>
+              <div class="triptych-zoom-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Row: Specs Grid + Mini Lot Locator Map -->
+          <div class="villa-stacked-footer">
+            <div class="stacked-specs-grid">
+              <div class="spec-tile">
+                <span class="spec-label" data-i18n="spec.sbp">Surface brute (SBP)</span>
+                <span class="spec-val">370 m²</span>
+              </div>
+              <div class="spec-tile">
+                <span class="spec-label" data-i18n="spec.living">Surface habitable</span>
+                <span class="spec-val">200 m²</span>
+              </div>
+              <div class="spec-tile highlight">
+                <span class="spec-label" data-i18n="spec.garden">Jardin privatif</span>
+                <span class="spec-val">541 m²</span>
+              </div>
+              <div class="spec-tile">
+                <span class="spec-label" data-i18n="spec.basement">Sous-sol modulable</span>
+                <span class="spec-val">&gt; 100 m²</span>
+              </div>
+            </div>
+            <div class="stacked-locator-box prominent" data-i18n-attr="title:loc.hint_title" title="Cliquer pour localiser sur le plan interactif">
+              <div class="locator-thumb-wrap">
+                <img src="assets/atelier-project5.webp" data-i18n-attr="alt:loc.alt3" alt="Emplacement Villa 3 sur plan">
+              </div>
+              <div class="locator-info">
+                <span class="locator-title" data-i18n="loc.title">Emplacement sur le plan</span>
+                <strong class="locator-name" data-i18n="loc.v3">Villa 3 • En haut à droite</strong>
+                <span class="locator-hint" data-i18n="loc.hint">Voir sur le plan général ↓</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       2. MASTERPLAN INTERACTIF & DISPONIBILITÉS
+       Interactive Plan & Lots Table
+       ========================================== -->
+  <section id="plan" class="section-regular text-center">
+    <div class="container plan-container">
+      <h2 class="sub-title" data-i18n="plan.eyebrow">PLAN DU DOMAINE</h2>
+      <h1 class="main-title" data-i18n="plan.title">Disponibilités &amp; plan interactif</h1>
+
+      <div class="interactive-section plane">
+        <!-- Col gauche: Masterplan interactif (Grand format proportionnel) -->
+        <div class="image-display" id="masterplan-wrapper">
+          <div class="map-stage" id="map-stage">
+            <img src="assets/atelier-project0.webp" data-i18n-attr="alt:plan.alt0" alt="Plan Général Domaine de Bellevue" class="active" id="plan-img-0">
+            <img src="assets/atelier-project3.webp" data-i18n-attr="alt:plan.alt1" alt="Lot 1 (en haut à gauche - 939 m²)" id="plan-img-1">
+            <img src="assets/atelier-project4.webp" alt="Lot 2" id="plan-img-2">
+            <img src="assets/atelier-project5.webp" alt="Lot 3" id="plan-img-3">
+            <img src="assets/atelier-project6.webp" alt="Lot 4" id="plan-img-4">
+            <img src="assets/atelier-project1.webp" alt="Lot 5" id="plan-img-5">
+            <img src="assets/atelier-project2.webp" alt="Lot 6" id="plan-img-6">
+            <img src="assets/atelier-project7.webp" alt="Lot 7" id="plan-img-7">
+            <img src="assets/atelier-project8.webp" alt="Lot 8" id="plan-img-8">
+
+            <!-- Clean Transparent Hotspots (Hovering plan highlights the chart row) -->
+            <div class="map-hotspots-layer">
+              <div class="map-lot-hotspot" data-lot="1" style="left: 5.7%; top: 27.2%; width: 28.9%; height: 29.0%;" data-i18n-attr="title:loc.v1" title="Villa 1 • En haut à gauche"></div>
+              <div class="map-lot-hotspot" data-lot="2" style="left: 36.7%; top: 20.2%; width: 14.4%; height: 18.2%;" data-i18n-attr="title:loc.v2" title="Villa 2 • En haut au centre"></div>
+              <div class="map-lot-hotspot" data-lot="3" style="left: 49.9%; top: 17.0%; width: 14.3%; height: 17.0%;" data-i18n-attr="title:loc.v3" title="Villa 3 • En haut à droite"></div>
+              <div class="map-lot-hotspot" data-lot="4" style="left: 62.4%; top: 8.0%; width: 14.3%; height: 16.8%;" title="Villa 4"></div>
+              <div class="map-lot-hotspot" data-lot="5" style="left: 5.9%; top: 50.2%; width: 32.0%; height: 35.5%;" title="Villa 5"></div>
+              <div class="map-lot-hotspot" data-lot="6" style="left: 39.7%; top: 40.8%; width: 20.0%; height: 24.5%;" title="Villa 6"></div>
+              <div class="map-lot-hotspot" data-lot="7" style="left: 60.1%; top: 29.5%; width: 15.5%; height: 23.2%;" title="Villa 7"></div>
+              <div class="map-lot-hotspot" data-lot="8" style="left: 75.5%; top: 25.8%; width: 14.8%; height: 18.0%;" title="Villa 8"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col droite: Tableau interactif avec tous les PDFs officiels -->
+        <div class="table-container">
+          <table class="interactive-table">
+            <thead>
+              <tr>
+                <th data-i18n="plan.th_sbp">SBP totale</th>
+                <th data-i18n="plan.th_living">SBP habitable</th>
+                <th data-i18n="plan.th_garden">Jardin</th>
+                <th data-i18n="plan.th_price">Prix</th>
+                <th>Plans</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- LOT 1 (Available - PDF Included) -->
+              <tr data-img="1" class="row-available" id="table-row-1">
+                <td>372 m²</td>
+                <td>198 m²</td>
+                <td>939 m²</td>
+                <td data-i18n="plan.request">Sur demande</td>
+                <td class="link-icon">
+                  <a href="docs/Domaine-de-Bellevue-Lot-1-.pdf" target="_blank" data-i18n-attr="title:plan.pdf1" title="Plans officiels Lot 1">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#847657" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                  </a>
+                </td>
+              </tr>
+
+              <!-- LOT 2 (Available - PDF Included) -->
+              <tr data-img="2" class="row-available" id="table-row-2">
+                <td>376 m²</td>
+                <td>201 m²</td>
+                <td>499 m²</td>
+                <td data-i18n="plan.request">Sur demande</td>
+                <td class="link-icon">
+                  <a href="docs/Domaine-de-Bellevue-Lot-2.pdf" target="_blank" data-i18n-attr="title:plan.pdf2" title="Plans officiels Lot 2">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#847657" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                  </a>
+                </td>
+              </tr>
+
+              <!-- LOT 3 (Available - PDF Included) -->
+              <tr data-img="3" class="row-available" id="table-row-3">
+                <td>370 m²</td>
+                <td>200 m²</td>
+                <td>541 m²</td>
+                <td data-i18n="plan.request">Sur demande</td>
+                <td class="link-icon">
+                  <a href="docs/Domaine-de-Bellevue-Lot-3.pdf" target="_blank" data-i18n-attr="title:plan.pdf3" title="Plans officiels Lot 3">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#847657" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                  </a>
+                </td>
+              </tr>
+
+              <!-- LOT 4 (Reserve - No PDF) -->
+              <tr data-img="4" id="table-row-4">
+                <td>374 m²</td>
+                <td>199 m²</td>
+                <td>782 m²</td>
+                <td data-i18n="plan.reserved">Réservée</td>
+                <td class="link-icon">-</td>
+              </tr>
+
+              <!-- LOT 5 (Sold - No PDF) -->
+              <tr data-img="5" id="table-row-5">
+                <td>377 m²</td>
+                <td>200 m²</td>
+                <td>479 m²</td>
+                <td data-i18n="plan.sold">Vendue</td>
+                <td class="link-icon">-</td>
+              </tr>
+
+              <!-- LOT 6 (Reserve - No PDF) -->
+              <tr data-img="6" id="table-row-6">
+                <td>370 m²</td>
+                <td>198 m²</td>
+                <td>330 m²</td>
+                <td data-i18n="plan.reserved">Réservée</td>
+                <td class="link-icon">-</td>
+              </tr>
+
+              <!-- LOT 7 (Sold - No PDF) -->
+              <tr data-img="7" id="table-row-7">
+                <td>369 m²</td>
+                <td>198 m²</td>
+                <td>303 m²</td>
+                <td data-i18n="plan.sold">Vendue</td>
+                <td class="link-icon">-</td>
+              </tr>
+
+              <!-- LOT 8 (Sold - No PDF) -->
+              <tr data-img="8" id="table-row-8">
+                <td>375 m²</td>
+                <td>200 m²</td>
+                <td>577 m²</td>
+                <td data-i18n="plan.sold">Vendue</td>
+                <td class="link-icon">-</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="table-footnote text-center" style="text-align:left; margin-top:16px;">
+            <p data-i18n="plan.note_sbp"><strong>SBP :</strong> Surface brute de plancher calculée selon les normes cantonales vaudoises.</p>
+            <p data-i18n="plan.disclaimer">Toutes les informations et visuels présentés sont non-contractuels et fournis à titre d’exemple. Le mobilier et finitions peuvent différer du projet final. Des modifications et adaptations restent réservées jusqu’à l’achèvement de la construction.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION: DISPONIBILITÉ 2027 & CADRE
+       ========================================== -->
+  <section class="section-regular text-center">
+    <div class="container">
+      <h2 class="sub-title" data-i18n="avail.eyebrow">DISPONIBILITÉ 2027</h2>
+      <h1 class="main-title" data-i18n="avail.title">Domaine résidentiel exclusif à Trélex</h1>
+      <p class="section-text" data-i18n="avail.text">À une adresse privilégiée de la commune, sur les hauteurs paisibles de Trélex, se déploie un ensemble rare de huit villas d’exception. Conçu comme un véritable domaine privé, ce projet allie raffinement, discrétion et confort haut de gamme. Nichées dans un écrin de verdure, certaines villas profitent même de vues dégagées sur le lac Léman, offrant un cadre de vie à la fois exclusif et harmonieux.</p>
+    </div>
+  </section>
+
+  <!-- FULL-WIDTH CONSTRAINED ZOOM RENDER -->
+  <div class="my-zoom-img">
+    <img src="assets/Untitled-design-44-scaled.png" data-i18n-attr="alt:avail.alt" alt="Domaine de Bellevue Trélex - Vue Aérienne">
+  </div>
+
+  <!-- ==========================================
+       SECTION: LE PROJET
+       ========================================== -->
+  <section id="projet" class="section-regular text-center">
+    <div class="container">
+      <h2 class="sub-title" data-i18n="project.eyebrow">LE PROJET</h2>
+      <h1 class="main-title" data-i18n="project.title">Un domaine pensé pour vous</h1>
+      <p class="section-text" data-i18n="project.text">Ce domaine résidentiel se distingue par ses espaces généreux, son architecture contemporaine et ses finitions de prestige. Entourées d’arbres et protégées de toute agitation, les villas offrent intimité et sérénité. Chaque bien est conçu pour un art de vivre moderne : volumes lumineux, terrasses privées spacieuses et modularité intelligente. Plus qu’une simple résidence, c’est une communauté élégante et paisible au cœur d’un environnement privilégié.</p>
+    </div>
+  </section>
+
+  <div class="my-zoom-img">
+    <img src="assets/le-project.jpg" data-i18n-attr="alt:project.alt" alt="Le Projet Domaine de Bellevue">
+  </div>
+
+  <!-- ==========================================
+       SECTION: ARCHITECTURE & DESIGN
+       ========================================== -->
+  <section id="architecture" class="section-regular text-center">
+    <div class="container">
+      <h2 class="sub-title">ARCHITECTURE &amp; DESIGN</h2>
+      <h1 class="main-title" data-i18n="arch.title">Des espaces pensés pour vivre avec style et sérénité</h1>
+      <p class="section-text" data-i18n="arch.text">Les villas s’intègrent avec élégance au paysage, mariant lignes modernes et matériaux nobles. Pierres naturelles, baies vitrées panoramiques et finitions haut de gamme façonnent des intérieurs intemporels où chaque détail respire qualité et sophistication. Les espaces de vie sont ouverts sur la nature environnante, créant une symbiose entre confort intérieur et beauté extérieure.</p>
+    </div>
+  </section>
+
+  <div class="my-zoom-img">
+    <img src="assets/hero3-scaled.jpg" data-i18n-attr="alt:arch.alt" alt="Architecture &amp; Design de Prestige">
+  </div>
+
+  <!-- ==========================================
+       SECTION: SITUATION & DISTANCES
+       ========================================== -->
+  <section id="situation" class="section-regular text-center">
+    <div class="container">
+      <h2 class="sub-title" data-i18n="loc.eyebrow">Expérience résidentielle exclusive à Trélex</h2>
+      <h1 class="main-title">Route de St. Cergue 27, 1270 Trélex</h1>
+      <p class="section-text" data-i18n="loc.text1">Situé dans un quartier résidentiel recherché et calme, ce domaine combine proximité avec la nature et accessibilité urbaine. À seulement quelques minutes de Nyon, et moins de 20 minutes de l’aéroport international de Genève, les résidents profitent d’un emplacement stratégique. Lausanne et Genève sont facilement accessibles, tout comme les stations de ski du Jura et des Alpes.</p>
+      <p class="section-text" data-i18n="loc.text2">À deux pas, le Parcours Vita (7 minutes à pied), les forêts et vignobles invitent à la détente et aux activités en plein air. Les familles apprécieront la proximité de prestigieuses écoles locales et internationales, offrant aussi bien la Maturité suisse que des diplômes internationaux reconnus, garantissant un cadre scolaire d’excellence pour leurs enfants.</p>
+
+      <table class="distanz-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>
+              <img src="assets/arrows.png" alt="Distance" class="icon" style="height:22px; width:auto; margin:0 auto 4px;">
+              <span>Distance</span>
+            </th>
+            <th>
+              <img src="assets/car.png" data-i18n-attr="alt:loc.car_alt" alt="Voiture" class="icon" style="height:22px; width:auto; margin:0 auto 4px;">
+              <span data-i18n="loc.car">En voiture</span>
+            </th>
+            <th>
+              <img src="assets/public-transport.png" data-i18n-attr="alt:loc.transport_alt" alt="Transports publics" class="icon" style="height:22px; width:auto; margin:0 auto 4px;">
+              <span data-i18n="loc.transport">Transports publics</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-i18n="loc.geneva">Genève</td>
+            <td>26 km</td>
+            <td>25 min</td>
+            <td>40 min</td>
+          </tr>
+          <tr>
+            <td>Lausanne</td>
+            <td>40 km</td>
+            <td>35 min</td>
+            <td data-i18n="loc.hour">1 h</td>
+          </tr>
+          <tr>
+            <td>Nyon</td>
+            <td>5 km</td>
+            <td>8 min</td>
+            <td>15 min</td>
+          </tr>
+          <tr>
+            <td data-i18n="loc.airport">Genève Aéroport</td>
+            <td>24 km</td>
+            <td>20 min</td>
+            <td>40 min</td>
+          </tr>
+          <tr>
+            <td data-i18n="loc.school">École Moser</td>
+            <td>2.5 km</td>
+            <td>4 min</td>
+            <td>20 min</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="my-zoom-img">
+    <img src="assets/image01_final-scaled.png" data-i18n-attr="alt:loc.alt" alt="Vue Aérienne Domaine de Bellevue">
+  </div>
+
+  <!-- ==========================================
+       SECTION: LIFESTYLE (Horizontal Scroll Slider)
+       ========================================== -->
+  <section id="lifestyle" class="section-regular text-center">
+    <div class="container">
+      <h2 class="sub-title" data-i18n="life.eyebrow">STYLE DE VIE</h2>
+      <h1 class="main-title" data-i18n="life.title">Art de vivre</h1>
+    </div>
+
+    <div class="scroll-section">
+      <button class="scroll-btn left" data-i18n-attr="aria-label:life.prev" aria-label="Précédent"><span>‹</span></button>
+      <button class="scroll-btn right" data-i18n-attr="aria-label:life.next" aria-label="Suivant"><span>›</span></button>
+
+      <div class="scroll-container">
+        <!-- Slide 1 -->
+        <div class="scroll-item">
+          <div class="img-wrapper">
+            <img src="assets/3.jpg" data-i18n-attr="alt:life.alt1" alt="Un quartier vivant">
+          </div>
+          <h3 data-i18n="life.h1">UN QUARTIER VIVANT</h3>
+          <p data-i18n="life.p1">À proximité de Trélex, profitez d’une grande variété de restaurants et de cafés, mais aussi de commerces, services et lieux de convivialité. Les villes voisines dans la région de Nyon, Genève et Lausanne enrichissent encore l’offre avec une scène culturelle, gastronomique et sociale riche et diversifiée.</p>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="scroll-item">
+          <div class="img-wrapper">
+            <img src="assets/1.jpg" data-i18n-attr="alt:life.alt2" alt="Cadre de vie familial">
+          </div>
+          <h3 data-i18n="life.h2">CADRE DE VIE FAMILIAL</h3>
+          <p data-i18n="life.p2">La proximité d’écoles de haute qualité facilite le quotidien des parents et rassure sur l’avenir des enfants. Une offre variée d’activités, entre sport, culture et espaces verts, crée un cadre sûr et agréable où les plus jeunes peuvent s’épanouir pleinement.</p>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="scroll-item">
+          <div class="img-wrapper">
+            <img src="assets/4.jpg" data-i18n-attr="alt:life.alt3" alt="Une région aux mille plaisirs">
+          </div>
+          <h3 data-i18n="life.h3">UNE RÉGION AUX MILLE PLAISIRS</h3>
+          <p data-i18n="life.p3">Entre lac et montagnes, la région invite à la détente et à l’aventure. Sports nautiques sur le Léman, randonnées alpines, balades à vélo dans la campagne vaudoise et, en hiver, les pistes de ski de St-Cergue à seulement 15 minutes offrent une qualité de vie unique au rythme des saisons.</p>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="scroll-item">
+          <div class="img-wrapper">
+            <img src="assets/2.jpg" data-i18n-attr="alt:life.alt4" alt="Au cœur de la nature">
+          </div>
+          <h3 data-i18n="life.h4">AU CŒUR DE LA NATURE</h3>
+          <p data-i18n="life.p4">Parcours Vita Trélex, à seulement 5 minutes à pied, s’ajoute aux autres parcs et espaces verts des environs, offrant un cadre idéal pour l’exercice, la détente et les activités en plein air. La proximité immédiate de la nature et de la forêt offre un cadre idéal pour les personnes avec des animaux de compagnie et invite à de belles promenades en plein air.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION: BROCHURE ET PLANS
+       ========================================== -->
+  <section id="brochure">
+    <div class="container">
+      <div class="brochure-row">
+        <!-- Email -->
+        <div class="brochure-col">
+          <div class="brochure-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#847657" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </div>
+          <h4>Email</h4>
+          <a href="mailto:sales@silverpine.ch">SALES@SILVERPINE.CH</a>
+        </div>
+
+        <!-- Brochure -->
+        <div class="brochure-col">
+          <div class="brochure-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#847657" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+          </div>
+          <h4>BROCHURE</h4>
+          <a href="docs/DOMAINE-DE-BELLEVUE-2026-1.pdf" target="_blank" data-i18n="dl">TÉLÉCHARGER</a>
+        </div>
+
+        <!-- Plans -->
+        <div class="brochure-col">
+          <div class="brochure-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#847657" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          </div>
+          <h4>PLANS</h4>
+          <a href="docs/Domaine-de-Bellevue-Plans.pdf" target="_blank" data-i18n="dl">TÉLÉCHARGER</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION: PRENONS CONTACT & CONSEIL ET VENTE
+       ========================================== -->
+  <section id="contact">
+    <div class="container contact-layout">
+      <div class="text-center">
+        <h1 class="main-title" data-i18n="contact.title">Prenons contact</h1>
+      </div>
+
+      <form id="original-contact-form">
+        <div class="contact-form-grid">
+          <div>
+            <input type="text" class="contact-input" data-i18n-attr="placeholder:form.first" placeholder="Prénom" required>
+          </div>
+          <div>
+            <input type="text" class="contact-input" data-i18n-attr="placeholder:form.last" placeholder="Nom" required>
+          </div>
+          <div>
+            <input type="email" class="contact-input" placeholder="Email" required>
+          </div>
+          <div>
+            <input type="tel" class="contact-input" data-i18n-attr="placeholder:form.phone" placeholder="Téléphone">
+          </div>
+          <div class="form-full">
+            <textarea class="contact-textarea" placeholder="Message"></textarea>
+          </div>
+          <div class="contact-checkbox-wrap">
+            <input type="checkbox" id="privacy-policy" required>
+            <label for="privacy-policy" data-i18n="form.privacy">J’accepte la politique de confidentialité</label>
+          </div>
+          <button type="submit" class="contact-submit-btn" data-i18n="form.send">Envoyer</button>
+        </div>
+      </form>
+
+      <!-- Conseil et vente (Silverpine SA & Daniel Meister) -->
+      <div class="advisor-row">
+        <div class="advisor-text-col">
+          <h2 class="sub-title" style="text-align: left; margin-bottom: 10px;" data-i18n="advisor.eyebrow">Conseil et vente</h2>
+          <div style="margin-bottom: 16px;">
+            <img src="assets/SILVERPINE.png" alt="Silverpine SA" style="max-height: 34px; width: auto;">
+          </div>
+          <p data-i18n="advisor.text">Silverpine SA est une société d’investissement familiale suisse basée à Nidwald, qui développe des projets immobiliers de premier plan dans le canton de Vaud et en Suisse centrale. Chaque projet est conduit avec précision et engagement, garantissant progrès constant, qualité irréprochable et transparence totale. Au cœur de notre philosophie se trouvent des relations durables avec nos clients et partenaires, fondées sur la confiance, l’intégrité et la collaboration. Nos villas et appartements marient une architecture intemporelle à un confort moderne, pour offrir des lieux de vie uniques et inspirants. Conçus avec des matériaux durables de la plus haute qualité, ils garantissent une valeur pérenne et un bien-être exceptionnel, que ce soit pour des familles ou des particuliers.</p>
+          <div class="advisor-links">
+            <a href="tel:+41793954958">+41 79 395 49 58</a>
+            <a href="mailto:sales@silverpine.ch">sales@silverpine.ch</a>
+            <a href="https://www.silverpine.ch" target="_blank" rel="noopener">www.silverpine.ch</a>
+          </div>
+        </div>
+
+        <div class="advisor-photo-col">
+          <img src="assets/Daniel-Meister.jpg" alt="Daniel Meister">
+          <h5>Daniel Meister</h5>
+          <span data-i18n="advisor.role">Responsable des projets</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION: PARTENAIRES
+       ========================================== -->
+  <div class="partners-wrap">
+    <div class="container">
+      <p data-i18n="partners">PARTENAIRES</p>
+      <div class="partners-logos">
+        <img src="assets/batineg-batisseurdesolutions-logo.png" alt="Batineg Bâtisseur de solutions">
+        <img src="assets/Atelier-logo.png" alt="Atelier">
+        <img src="assets/UBS.png" alt="UBS">
+        <img src="assets/SILVERPINE.png" alt="Silverpine">
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       SECTION: FOOTER
+       ========================================== -->
+  <footer id="site-footer">
+    <div class="container">
+      <p>© 2026 SILVERPINE AG &nbsp;|&nbsp; <a href="#" style="text-decoration:underline;" data-i18n="footer.privacy">Politique de confidentialité</a></p>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       FULLSCREEN HIGH-RES LIGHTBOX MODAL
+       ========================================== -->
+  <div id="villa-lightbox" class="villa-lightbox" aria-hidden="true">
+    <div class="lightbox-overlay-backdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" type="button" data-i18n-attr="aria-label:lb.close" aria-label="Fermer la vue agrandie">&times;</button>
+      <div class="lightbox-image-wrap">
+        <img src="" data-i18n-attr="alt:lb.alt" alt="Vue agrandie" id="lightbox-img">
+      </div>
+      <div class="lightbox-bottom-bar">
+        <span id="lightbox-caption" class="lightbox-caption"></span>
+        <div class="lightbox-nav-buttons">
+          <button type="button" id="lightbox-prev" class="lightbox-nav-btn" data-i18n="lb.prev">&#10094; Précédent</button>
+          <button type="button" id="lightbox-next" class="lightbox-nav-btn" data-i18n="lb.next">Suivant &#10095;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       SCRIPTS (Animation Logic & Two-Way Synchronized Hover)
+       ========================================== -->
+  <script src="js/i18n.js"></script>
+  <script>
+    // 1. Header Shrink & Hamburger Overlay
+    const header = document.getElementById("domain-header");
+    const menuToggle = document.getElementById("menu-toggle");
+    const overlayLinks = document.querySelectorAll(".overlay-link");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        header.classList.add("shrink");
+      } else {
+        header.classList.remove("shrink");
+      }
+    });
+
+    if (menuToggle) {
+      menuToggle.addEventListener("click", () => {
+        document.body.classList.toggle("menu-open");
+        menuToggle.classList.toggle("is-open");
+      });
+    }
+
+    overlayLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        document.body.classList.remove("menu-open");
+        if (menuToggle) menuToggle.classList.remove("is-open");
+      });
+    });
+
+    // 2. Fullscreen Slideshow
+    (function(){
+      const slides = document.querySelectorAll("#fullscreen-slideshow .slide");
+      let index = 0;
+      if (slides.length > 1) {
+        setInterval(() => {
+          slides[index].classList.remove("active");
+          index = (index + 1) % slides.length;
+          slides[index].classList.add("active");
+        }, 6000);
+      }
+    })();
+
+    // 3. Zoom-in on Scroll Observer
+    document.addEventListener("DOMContentLoaded", () => {
+      const zoomElems = document.querySelectorAll(".my-zoom-img");
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+          }
+        });
+      }, { threshold: 0.15 });
+
+      zoomElems.forEach(el => observer.observe(el));
+    });
+
+    // 4. Interactive Masterplan & Two-Way Synchronized Hover
+    // Mapping:
+    // Lot 1 (Top Left, 939 m² plot) -> plan-img-1 (atelier-project3.webp)
+    // Lot 2 -> plan-img-2 (atelier-project4.webp)
+    // Lot 3 -> plan-img-3 (atelier-project5.webp)
+    // Lot 4 -> plan-img-4 (atelier-project6.webp)
+    // Lot 5 -> plan-img-5 (atelier-project1.webp)
+    // Lot 6 -> plan-img-6 (atelier-project2.webp)
+    // Lot 7 -> plan-img-7 (atelier-project7.webp)
+    // Lot 8 -> plan-img-8 (atelier-project8.webp)
+    (function(){
+      const rows = document.querySelectorAll(".interactive-table tbody tr");
+      const images = document.querySelectorAll(".map-stage img");
+      const hotspots = document.querySelectorAll(".map-lot-hotspot");
+      const villaCards = document.querySelectorAll(".villa-stacked-block");
+
+      function showImage(index){
+        images.forEach((img, i) => {
+          img.classList.toggle("active", i === index);
+        });
+      }
+
+      function highlightTableRow(lotNum, active){
+        const row = document.getElementById("table-row-" + lotNum);
+        if (row) {
+          if (active) {
+            row.classList.add("highlighted");
+          } else {
+            row.classList.remove("highlighted");
+          }
+        }
+      }
+
+      showImage(0);
+
+      // 1. Hover on table rows -> highlights map image & villa card above
+      rows.forEach(row => {
+        const lotNum = parseInt(row.dataset.img, 10);
+        
+        row.addEventListener("mouseenter", () => {
+          showImage(lotNum);
+          if (lotNum >= 1 && lotNum <= 3) {
+            const card = document.getElementById("villa-card-" + lotNum);
+            if (card) card.classList.add("highlighted");
+          }
+        });
+
+        row.addEventListener("mouseleave", () => {
+          showImage(0);
+          if (lotNum >= 1 && lotNum <= 3) {
+            const card = document.getElementById("villa-card-" + lotNum);
+            if (card) card.classList.remove("highlighted");
+          }
+        });
+      });
+
+      // 2. Hover on Map Hotspots -> HIGHLIGHTS THE CHART ROW & MAP IMAGE!
+      hotspots.forEach(hs => {
+        const lotNum = parseInt(hs.dataset.lot, 10);
+
+        hs.addEventListener("mouseenter", () => {
+          showImage(lotNum);
+          highlightTableRow(lotNum, true);
+        });
+
+        hs.addEventListener("mouseleave", () => {
+          showImage(0);
+          highlightTableRow(lotNum, false);
+        });
+
+        // Click on available lots (1, 2, 3) on the map scrolls up to the villa presentation
+        hs.addEventListener("click", () => {
+          if (lotNum >= 1 && lotNum <= 3) {
+            const card = document.getElementById("villa-card-" + lotNum);
+            if (card) {
+              card.scrollIntoView({ behavior: "smooth", block: "center" });
+              card.classList.add("highlighted");
+              setTimeout(() => card.classList.remove("highlighted"), 2500);
+            }
+          }
+        });
+      });
+
+      // 3. Hover on Villa cards -> highlights masterplan map & chart row below
+      villaCards.forEach(card => {
+        const lotNum = parseInt(card.dataset.lot, 10);
+
+        card.addEventListener("mouseenter", () => {
+          showImage(lotNum);
+          highlightTableRow(lotNum, true);
+        });
+
+        card.addEventListener("mouseleave", () => {
+          showImage(0);
+          highlightTableRow(lotNum, false);
+        });
+      });
+    })();
+
+    // 7. Villa Multi-View Galleries & High-Res Lightbox
+    (function(){
+      const galleryContainers = document.querySelectorAll(".villa-gallery-container");
+      const lightbox = document.getElementById("villa-lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const lightboxCaption = document.getElementById("lightbox-caption");
+      const lightboxClose = document.querySelector(".lightbox-close");
+      const lightboxBackdrop = document.querySelector(".lightbox-overlay-backdrop");
+      const lightboxPrev = document.getElementById("lightbox-prev");
+      const lightboxNext = document.getElementById("lightbox-next");
+
+      let currentGalleryImages = [];
+      let currentGalleryCaptions = [];
+      let currentLightboxIdx = 0;
+
+      function updateLightbox() {
+        if (!currentGalleryImages.length) return;
+        lightboxImg.src = currentGalleryImages[currentLightboxIdx];
+        lightboxCaption.textContent = currentGalleryCaptions[currentLightboxIdx] || "";
+      }
+
+      function openLightbox(images, captions, startIndex) {
+        currentGalleryImages = images;
+        currentGalleryCaptions = captions;
+        currentLightboxIdx = startIndex;
+        updateLightbox();
+        lightbox.classList.add("active");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("active");
+        lightbox.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+      }
+
+      if (lightboxClose) lightboxClose.addEventListener("click", closeLightbox);
+      if (lightboxBackdrop) lightboxBackdrop.addEventListener("click", closeLightbox);
+
+      if (lightboxPrev) {
+        lightboxPrev.addEventListener("click", () => {
+          currentLightboxIdx = (currentLightboxIdx - 1 + currentGalleryImages.length) % currentGalleryImages.length;
+          updateLightbox();
+        });
+      }
+
+      if (lightboxNext) {
+        lightboxNext.addEventListener("click", () => {
+          currentLightboxIdx = (currentLightboxIdx + 1) % currentGalleryImages.length;
+          updateLightbox();
+        });
+      }
+
+      document.addEventListener("keydown", (e) => {
+        if (!lightbox.classList.contains("active")) return;
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowLeft") lightboxPrev.click();
+        if (e.key === "ArrowRight") lightboxNext.click();
+      });
+
+      // Lightbox for Triptych items (all 3 images per villa)
+      const triptychItems = document.querySelectorAll(".triptych-item");
+      triptychItems.forEach(item => {
+        item.addEventListener("click", () => {
+          const parentTriptych = item.closest(".villa-images-triptych");
+          if (!parentTriptych) return;
+          const allItems = Array.from(parentTriptych.querySelectorAll(".triptych-item"));
+          const imgs = allItems.map(it => it.querySelector("img").src);
+          const captions = allItems.map(it => it.querySelector(".triptych-label").textContent);
+          const itemIdx = allItems.indexOf(item);
+          openLightbox(imgs, captions, itemIdx >= 0 ? itemIdx : 0);
+        });
+      });
+
+      // Mini lot locator click -> scrolls to masterplan and highlights lot
+      const locatorBoxes = document.querySelectorAll(".stacked-locator-box");
+      locatorBoxes.forEach(box => {
+        box.addEventListener("click", () => {
+          const block = box.closest(".villa-stacked-block");
+          if (!block) return;
+          const lotNum = parseInt(block.dataset.lot, 10);
+          const planSection = document.getElementById("plan");
+          if (planSection) {
+            planSection.scrollIntoView({ behavior: "smooth" });
+            const tableRow = document.getElementById("table-row-" + lotNum);
+            if (tableRow) {
+              const mouseEnterEvent = new Event("mouseenter");
+              tableRow.dispatchEvent(mouseEnterEvent);
+              tableRow.style.backgroundColor = "rgba(132, 118, 87, 0.3)";
+              setTimeout(() => {
+                tableRow.style.backgroundColor = "";
+              }, 2500);
+            }
+          }
+        });
+      });
+    })();
+
+    // 8. Lifestyle Carousel Horizontal Scroll
+    (function(){
+      const container = document.querySelector(".scroll-container");
+      const btnLeft = document.querySelector(".scroll-btn.left");
+      const btnRight = document.querySelector(".scroll-btn.right");
+
+      if (container && btnLeft && btnRight) {
+        btnLeft.addEventListener("click", () => {
+          container.scrollBy({ left: -360, behavior: "smooth" });
+        });
+        btnRight.addEventListener("click", () => {
+          container.scrollBy({ left: 360, behavior: "smooth" });
+        });
+      }
+    })();
+
+    // 9. Contact Form Feedback
+    const contactForm = document.getElementById("original-contact-form");
+    if (contactForm) {
+      contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const submitBtn = contactForm.querySelector(".contact-submit-btn");
+        const tr = (k, fallback) => (window.i18n ? window.i18n.t(k) : fallback);
+        submitBtn.textContent = tr("form.sent", "Envoyé avec succès").toUpperCase();
+        submitBtn.style.backgroundColor = "#2b3b2e";
+        setTimeout(() => {
+          contactForm.reset();
+          submitBtn.textContent = tr("form.send", "Envoyer");
+          submitBtn.style.backgroundColor = "#847657";
+        }, 3000);
+      });
+    }
+  </script>
+</body>
+</html>
