@@ -2164,4 +2164,32 @@ html, body {
     font-size: 11px !important;
     align-items: flex-start;
   }
+
+  /* Partner Logos & Footer Mobile Sizing */
+  .partners-wrap {
+    padding: 28px 0 32px !important;
+  }
+
+  .partners-wrap p {
+    font-size: 9.5px !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .partners-logos {
+    gap: 16px 22px !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .partners-logos img {
+    max-height: 20px !important;
+    max-width: 110px !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  .advisor-text-col img {
+    max-height: 24px !important;
+  }
 }
