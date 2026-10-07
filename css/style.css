@@ -2251,15 +2251,7 @@ html, body {
   animation: preloaderFill 1.1s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.1s;
 }
 
-.preloader-tagline {
-  font-family: var(--font-ridley);
-  font-size: 11px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #dfcb9f;
-  font-weight: 500;
-  letter-spacing: 3.5px;
-}
+
 
 @keyframes preloaderIn {
   from { opacity: 0; transform: translateY(8px); }
