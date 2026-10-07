@@ -16,6 +16,20 @@
 <body>
 
   <!-- ==========================================
+       LUXURY BRAND PRELOADER
+       ========================================== -->
+  <div id="ddb-preloader" class="ddb-preloader" aria-hidden="true">
+    <div class="preloader-brand">
+      <img src="assets/domaine-de-bellevue-logo_LOGO.svg" alt="Domaine de Bellevue" class="preloader-logo">
+      <div class="preloader-line-track">
+        <div class="preloader-line-fill"></div>
+      </div>
+      <span class="preloader-tagline">Trélex · Suisse</span>
+    </div>
+  </div>
+
+
+  <!-- ==========================================
        HEADER & HAMBURGER (Fixed Header with Logo)
        ========================================== -->
   <header id="domain-header">
@@ -832,18 +846,50 @@
       }
     })();
 
-    // 3. Zoom-in on Scroll Observer
+    // 3. Preloader & Scroll Reveal System
     document.addEventListener("DOMContentLoaded", () => {
-      const zoomElems = document.querySelectorAll(".my-zoom-img");
-      const observer = new IntersectionObserver((entries) => {
+      // Dismiss Preloader smoothly
+      const preloader = document.getElementById("ddb-preloader");
+      const hidePreloader = () => {
+        if (!preloader || preloader.classList.contains("fade-out")) return;
+        preloader.classList.add("fade-out");
+        setTimeout(() => {
+          if (preloader.parentNode) preloader.parentNode.removeChild(preloader);
+        }, 850);
+      };
+      window.addEventListener("load", hidePreloader);
+      setTimeout(hidePreloader, 1100);
+
+      // Scroll Reveal Elements
+      const targets = document.querySelectorAll(
+        ".sub-title, .main-title, .section-text, .villas-availability-map, " +
+        ".villa-stacked-block, .triptych-item, .my-zoom-img, .interactive-section, " +
+        ".distanz-table, .scroll-item, .brochure-card, .advisor-row, .contact-form-block"
+      );
+
+      targets.forEach(el => {
+        if (!el.closest("#hero")) {
+          if (el.classList.contains("my-zoom-img") || el.classList.contains("villas-availability-map")) {
+            el.classList.add("reveal-scale");
+          } else {
+            el.classList.add("reveal-on-scroll");
+          }
+        }
+      });
+
+      const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("in-view");
+            entry.target.classList.add("is-revealed");
+            if (entry.target.classList.contains("my-zoom-img")) {
+              entry.target.classList.add("in-view");
+            }
+            obs.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.15 });
+      }, { threshold: 0.1, rootMargin: "0px 0px -30px 0px" });
 
-      zoomElems.forEach(el => observer.observe(el));
+      targets.forEach(el => observer.observe(el));
     });
 
     // 4. Interactive Masterplan & Two-Way Synchronized Hover
