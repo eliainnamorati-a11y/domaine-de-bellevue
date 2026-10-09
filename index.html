@@ -214,7 +214,6 @@
                   <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
                   <span data-i18n="loc.zoom">Agrandir le plan</span>
                 </button>
-                <a href="#plan" class="locator-hint-link" data-i18n="loc.hint">Voir dans le tableau des disponibilités ↓</a>
               </div>
             </div>
           </div>
@@ -287,7 +286,6 @@
                   <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
                   <span data-i18n="loc.zoom">Agrandir le plan</span>
                 </button>
-                <a href="#plan" class="locator-hint-link" data-i18n="loc.hint">Voir dans le tableau des disponibilités ↓</a>
               </div>
             </div>
           </div>
@@ -360,7 +358,6 @@
                   <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
                   <span data-i18n="loc.zoom">Agrandir le plan</span>
                 </button>
-                <a href="#plan" class="locator-hint-link" data-i18n="loc.hint">Voir dans le tableau des disponibilités ↓</a>
               </div>
             </div>
           </div>
@@ -1077,32 +1074,6 @@
             window.i18n ? window.i18n.t("loc.v3", "Villa 3 • En haut à droite") : "Villa 3 • En haut à droite"
           ];
           openLightbox(estatePlans, captions, startIndex);
-        });
-      });
-
-      // Mini lot locator: clicking hint link scrolls to masterplan and highlights lot
-      const locatorLinks = document.querySelectorAll(".locator-hint-link");
-      locatorLinks.forEach(link => {
-        link.addEventListener("click", (e) => {
-          e.preventDefault();
-          const block = link.closest(".villa-stacked-block");
-          const lotNum = block ? parseInt(block.dataset.lot, 10) : null;
-          const planSection = document.getElementById("plan");
-          if (planSection) {
-            planSection.scrollIntoView({ behavior: "smooth" });
-            if (lotNum) {
-              const tableRow = document.getElementById("table-row-" + lotNum);
-              if (tableRow) {
-                tableRow.style.backgroundColor = "rgba(132, 118, 87, 0.3)";
-                setTimeout(() => { tableRow.style.backgroundColor = ""; }, 2500);
-              }
-              const card = document.querySelector(`.mobile-plan-card[data-lot="${lotNum}"]`);
-              if (card) {
-                card.style.outline = "2px solid #847657";
-                setTimeout(() => { card.style.outline = ""; }, 2500);
-              }
-            }
-          }
         });
       });
     })();

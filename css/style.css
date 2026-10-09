@@ -1265,24 +1265,6 @@ h1.main-title {
   flex-shrink: 0;
 }
 
-.locator-hint-link {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  font-family: var(--font-ridley);
-  font-size: 8.5px;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-  color: #847657;
-  text-decoration: none;
-  font-weight: 600;
-  margin: 0;
-  transition: color 0.2s ease;
-}
-
-.locator-hint-link:hover {
-  color: #384c3d;
-}
 
 .table-pos-pill {
   display: inline-block;
@@ -2190,13 +2172,6 @@ h1.main-title {
     border-color: #847657;
   }
 
-  .locator-hint-link {
-    order: 4;
-    justify-content: center;
-    text-align: center;
-    font-size: 8.5px;
-    margin-top: 2px;
-  }
   
   .custom-grid-two-col {
     grid-template-columns: 1fr;
@@ -2525,10 +2500,6 @@ html, body {
     padding: 8px 12px !important;
   }
 
-  .locator-hint-link {
-    font-size: 8.5px !important;
-    padding-top: 2px !important;
-  }
 
   /* Distance / Transport Table Mobile Fix */
   .distanz-table {
