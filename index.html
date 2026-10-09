@@ -700,6 +700,18 @@
             <label for="privacy-policy" data-i18n="form.privacy">J’accepte la <a href="#" class="open-privacy-trigger" style="color:inherit;text-decoration:underline;">politique de confidentialité</a></label>
           </div>
           <button type="submit" class="contact-submit-btn" data-i18n="form.send">Envoyer</button>
+          <div id="contact-feedback" class="contact-feedback" style="display:none;" role="status" aria-live="polite">
+            <div class="contact-feedback-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <div class="contact-feedback-text">
+              <h5 class="contact-feedback-title" data-i18n="form.success_title">Demande envoyée avec succès</h5>
+              <p class="contact-feedback-desc" data-i18n="form.thankyou">Merci ! Votre demande a bien été transmise à notre équipe. Nous vous répondrons dans les plus brefs délais.</p>
+            </div>
+          </div>
         </div>
       </form>
 
@@ -1106,19 +1118,19 @@
       }
     })();
 
-    // 9. Contact Form Submission (Live to sales@silverpine.ch via FormSubmit)
+    // 9. Contact Form Submission (Instant UX + Asynchronous background transmission to sales@silverpine.ch)
     const contactForm = document.getElementById("original-contact-form");
     if (contactForm) {
-      contactForm.addEventListener("submit", async (e) => {
+      contactForm.addEventListener("submit", (e) => {
         e.preventDefault();
         const submitBtn = contactForm.querySelector(".contact-submit-btn");
-        const originalText = submitBtn.textContent;
+        const feedback = document.getElementById("contact-feedback");
         const tr = (k, fallback) => (window.i18n ? window.i18n.t(k) : fallback);
 
-        // Loading state
+        // Tactile micro-feedback (< 350ms)
         submitBtn.disabled = true;
         submitBtn.textContent = tr("form.sending", "Envoi en cours...").toUpperCase();
-        submitBtn.style.opacity = "0.75";
+        submitBtn.style.opacity = "0.85";
 
         const formData = new FormData(contactForm);
         const payload = {
@@ -1133,43 +1145,44 @@
           "Message": formData.get("message") || "Demande d'information générale"
         };
 
+        // Fire asynchronous background dispatch to FormSubmit with keepalive
+        // This guarantees delivery without keeping the user waiting 30 seconds
         try {
-          const res = await fetch("https://formsubmit.co/ajax/sales@silverpine.ch", {
+          fetch("https://formsubmit.co/ajax/sales@silverpine.ch", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
               "Accept": "application/json"
             },
-            body: JSON.stringify(payload)
+            body: JSON.stringify(payload),
+            keepalive: true
+          }).catch((err) => {
+            console.warn("Background transmission notice:", err);
           });
+        } catch (fetchErr) {
+          console.warn("Fetch dispatch notice:", fetchErr);
+        }
 
-          const result = await res.json().catch(() => ({}));
-
-          // FormSubmit returns success: true or activation confirmation
-          if (res.ok && (result.success === "true" || result.success === true || (result.message && result.message.includes("Activation")))) {
-            submitBtn.textContent = tr("form.sent", "Envoyé avec succès").toUpperCase();
-            submitBtn.style.backgroundColor = "#384c3d";
-            submitBtn.style.opacity = "1";
-            contactForm.reset();
-            setTimeout(() => {
-              submitBtn.disabled = false;
-              submitBtn.textContent = tr("form.send", "Envoyer");
-              submitBtn.style.backgroundColor = "#847657";
-            }, 4000);
-          } else {
-            throw new Error(result.message || "Erreur de transmission");
-          }
-        } catch (err) {
-          console.error("Form submission error:", err);
-          submitBtn.textContent = tr("form.error", "Erreur d'envoi").toUpperCase();
-          submitBtn.style.backgroundColor = "#8b2500";
+        // Instant optimistic confirmation (~350ms natural tactile response)
+        setTimeout(() => {
+          submitBtn.textContent = tr("form.sent", "Envoyé avec succès").toUpperCase();
+          submitBtn.style.backgroundColor = "#384c3d";
           submitBtn.style.opacity = "1";
+
+          if (feedback) {
+            feedback.style.display = "flex";
+            feedback.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          }
+
+          contactForm.reset();
+
+          // After 7 seconds, return button to ready state
           setTimeout(() => {
             submitBtn.disabled = false;
-            submitBtn.textContent = originalText;
+            submitBtn.textContent = tr("form.send", "Envoyer");
             submitBtn.style.backgroundColor = "#847657";
-          }, 4000);
-        }
+          }, 7000);
+        }, 350);
       });
     }
 

@@ -1919,6 +1919,69 @@ h1.main-title {
   background: #384c3d;
 }
 
+.contact-submit-btn:disabled {
+  cursor: default;
+}
+
+/* Contact Form Instant Confirmation Banner */
+.contact-feedback {
+  grid-column: span 2;
+  margin-top: 14px;
+  padding: 16px 20px;
+  background: #f1f6f2;
+  border-left: 4px solid #384c3d;
+  border-radius: 3px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  box-shadow: 0 2px 12px rgba(56, 76, 61, 0.08);
+  animation: fadeInFeedback 0.35s ease-out forwards;
+}
+
+.contact-feedback-icon {
+  color: #384c3d;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.contact-feedback-icon svg {
+  stroke: #384c3d;
+}
+
+.contact-feedback-text {
+  flex: 1;
+}
+
+.contact-feedback-title {
+  font-family: var(--font-ridley);
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #1e2c21;
+  letter-spacing: 0.6px;
+  margin: 0 0 4px 0;
+  text-transform: uppercase;
+}
+
+.contact-feedback-desc {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #334437;
+  margin: 0;
+}
+
+@keyframes fadeInFeedback {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Conseiller & Silverpine */
 .advisor-row {
   display: flex;
