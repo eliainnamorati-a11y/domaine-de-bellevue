@@ -201,15 +201,16 @@
                 <span class="spec-val">939 m²</span>
               </div>
             </div>
-            <div class="stacked-locator-box prominent" data-i18n-attr="title:loc.hint_title" title="Cliquer pour voir le tableau des disponibilités">
-              <div class="locator-thumb-wrap">
-                <img src="assets/atelier-project3.webp" data-i18n-attr="alt:loc.alt1" alt="Emplacement Villa 1 sur plan" loading="lazy" decoding="async">
-              </div>
-              <div class="locator-info">
+            <div class="stacked-locator-box prominent" data-lot="1">
+              <div class="locator-top-bar">
                 <span class="locator-title" data-i18n="loc.title">Emplacement sur le plan</span>
                 <strong class="locator-name" data-i18n="loc.v1">Villa 1 • En haut à gauche</strong>
-                <span class="locator-hint" data-i18n="loc.hint">Voir les disponibilités ↓</span>
               </div>
+              <div class="locator-thumb-wrap" data-i18n-attr="title:loc.zoom_title" title="Cliquer pour agrandir le plan">
+                <img src="assets/atelier-project3.webp" data-i18n-attr="alt:loc.alt1" alt="Emplacement Villa 1 sur plan" loading="lazy" decoding="async">
+                <span class="locator-zoom-pill"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> <span data-i18n="loc.zoom">Agrandir le plan</span></span>
+              </div>
+              <a href="#plan" class="locator-hint-link" data-i18n="loc.hint">Voir dans le tableau des disponibilités ↓</a>
             </div>
           </div>
         </div>
@@ -268,15 +269,16 @@
                 <span class="spec-val">499 m²</span>
               </div>
             </div>
-            <div class="stacked-locator-box prominent" data-i18n-attr="title:loc.hint_title" title="Cliquer pour voir le tableau des disponibilités">
-              <div class="locator-thumb-wrap">
-                <img src="assets/atelier-project4.webp" data-i18n-attr="alt:loc.alt2" alt="Emplacement Villa 2 sur plan" loading="lazy" decoding="async">
-              </div>
-              <div class="locator-info">
+            <div class="stacked-locator-box prominent" data-lot="2">
+              <div class="locator-top-bar">
                 <span class="locator-title" data-i18n="loc.title">Emplacement sur le plan</span>
                 <strong class="locator-name" data-i18n="loc.v2">Villa 2 • En haut au centre</strong>
-                <span class="locator-hint" data-i18n="loc.hint">Voir les disponibilités ↓</span>
               </div>
+              <div class="locator-thumb-wrap" data-i18n-attr="title:loc.zoom_title" title="Cliquer pour agrandir le plan">
+                <img src="assets/atelier-project4.webp" data-i18n-attr="alt:loc.alt2" alt="Emplacement Villa 2 sur plan" loading="lazy" decoding="async">
+                <span class="locator-zoom-pill"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> <span data-i18n="loc.zoom">Agrandir le plan</span></span>
+              </div>
+              <a href="#plan" class="locator-hint-link" data-i18n="loc.hint">Voir dans le tableau des disponibilités ↓</a>
             </div>
           </div>
         </div>
@@ -335,15 +337,16 @@
                 <span class="spec-val">541 m²</span>
               </div>
             </div>
-            <div class="stacked-locator-box prominent" data-i18n-attr="title:loc.hint_title" title="Cliquer pour voir le tableau des disponibilités">
-              <div class="locator-thumb-wrap">
-                <img src="assets/atelier-project5.webp" data-i18n-attr="alt:loc.alt3" alt="Emplacement Villa 3 sur plan" loading="lazy" decoding="async">
-              </div>
-              <div class="locator-info">
+            <div class="stacked-locator-box prominent" data-lot="3">
+              <div class="locator-top-bar">
                 <span class="locator-title" data-i18n="loc.title">Emplacement sur le plan</span>
                 <strong class="locator-name" data-i18n="loc.v3">Villa 3 • En haut à droite</strong>
-                <span class="locator-hint" data-i18n="loc.hint">Voir les disponibilités ↓</span>
               </div>
+              <div class="locator-thumb-wrap" data-i18n-attr="title:loc.zoom_title" title="Cliquer pour agrandir le plan">
+                <img src="assets/atelier-project5.webp" data-i18n-attr="alt:loc.alt3" alt="Emplacement Villa 3 sur plan" loading="lazy" decoding="async">
+                <span class="locator-zoom-pill"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> <span data-i18n="loc.zoom">Agrandir le plan</span></span>
+              </div>
+              <a href="#plan" class="locator-hint-link" data-i18n="loc.hint">Voir dans le tableau des disponibilités ↓</a>
             </div>
           </div>
         </div>
@@ -1040,24 +1043,50 @@
         });
       });
 
-      // Mini lot locator click -> scrolls to masterplan and highlights lot
-      const locatorBoxes = document.querySelectorAll(".stacked-locator-box");
-      locatorBoxes.forEach(box => {
-        box.addEventListener("click", () => {
-          const block = box.closest(".villa-stacked-block");
-          if (!block) return;
-          const lotNum = parseInt(block.dataset.lot, 10);
+      // Mini lot locator: clicking thumbnail opens high-res plan in lightbox
+      const locatorThumbs = document.querySelectorAll(".locator-thumb-wrap");
+      const estatePlans = [
+        "assets/atelier-project3.webp",
+        "assets/atelier-project4.webp",
+        "assets/atelier-project5.webp"
+      ];
+      locatorThumbs.forEach((thumb, idx) => {
+        thumb.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const block = thumb.closest(".villa-stacked-block");
+          const lotNum = block ? parseInt(block.dataset.lot, 10) : (idx + 1);
+          const startIndex = Math.max(0, Math.min(2, lotNum - 1));
+          const captions = [
+            window.i18n ? window.i18n.t("loc.v1", "Villa 1 • En haut à gauche") : "Villa 1 • En haut à gauche",
+            window.i18n ? window.i18n.t("loc.v2", "Villa 2 • En haut au centre") : "Villa 2 • En haut au centre",
+            window.i18n ? window.i18n.t("loc.v3", "Villa 3 • En haut à droite") : "Villa 3 • En haut à droite"
+          ];
+          openLightbox(estatePlans, captions, startIndex);
+        });
+      });
+
+      // Mini lot locator: clicking hint link scrolls to masterplan and highlights lot
+      const locatorLinks = document.querySelectorAll(".locator-hint-link");
+      locatorLinks.forEach(link => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const block = link.closest(".villa-stacked-block");
+          const lotNum = block ? parseInt(block.dataset.lot, 10) : null;
           const planSection = document.getElementById("plan");
           if (planSection) {
             planSection.scrollIntoView({ behavior: "smooth" });
-            const tableRow = document.getElementById("table-row-" + lotNum);
-            if (tableRow) {
-              const mouseEnterEvent = new Event("mouseenter");
-              tableRow.dispatchEvent(mouseEnterEvent);
-              tableRow.style.backgroundColor = "rgba(132, 118, 87, 0.3)";
-              setTimeout(() => {
-                tableRow.style.backgroundColor = "";
-              }, 2500);
+            if (lotNum) {
+              const tableRow = document.getElementById("table-row-" + lotNum);
+              if (tableRow) {
+                tableRow.style.backgroundColor = "rgba(132, 118, 87, 0.3)";
+                setTimeout(() => { tableRow.style.backgroundColor = ""; }, 2500);
+              }
+              const card = document.querySelector(`.mobile-plan-card[data-lot="${lotNum}"]`);
+              if (card) {
+                card.style.outline = "2px solid #847657";
+                setTimeout(() => { card.style.outline = ""; }, 2500);
+              }
             }
           }
         });
