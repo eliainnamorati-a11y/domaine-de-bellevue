@@ -270,13 +270,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const villaModalsData = {
     1: {
       title: "Villa 1 – La Parcelle Belvédère (Lot 01)",
-      tagline: "Le plus grand jardin privé du Domaine (939 m²) avec vue dominante sur le Léman",
+      tagline: "Le plus grand jardin privé du Domaine (952 m²) avec vue dominante sur le Léman",
       surface_total: "372 m² SBP",
       surface_hab: "198 m² Habitable",
-      garden: "939 m² Jardin privatif",
-      description: "Véritable pièce maîtresse du domaine, la Villa 1 bénéficie d'une parcelle exceptionnelle de près de 1'000 m². Sa situation en hauteur lui confère une intimité rare, sans vis-à-vis, avec une perspective dégagée sur les Alpes et le lac Léman. Idéale pour l'implantation d'une piscine creusée privative et de vastes terrasses ensoleillées.",
+      garden: "952 m² Jardin",
+      description: "Véritable pièce maîtresse du domaine, la Villa 1 bénéficie d'une parcelle exceptionnelle de près de 1'000 m². Sa situation en hauteur lui confère une intimité rare, sans vis-à-vis, avec une perspective dégagée sur les Alpes et le lac Léman. Idéale pour l'implantation d'une piscine creusée et de vastes terrasses ensoleillées.",
       features: [
-        "Jardin monumental de 939 m² : le plus étendu de tout le projet",
+        "Jardin monumental de 952 m² : le plus étendu de tout le projet",
         "Position dominante en proue du domaine offrant une intimité totale",
         "Espace extérieur propice à la construction d'une piscine chauffée (faisabilité étudiée)",
         "Séjour traversant avec baies vitrées coulissantes à galandage",
@@ -290,7 +290,7 @@ document.addEventListener("DOMContentLoaded", () => {
       tagline: "La plus grande surface brute de plancher du projet (376 m²) avec orientation Sud / Sud-Ouest",
       surface_total: "376 m² SBP",
       surface_hab: "201 m² Habitable",
-      garden: "499 m² Jardin privatif",
+      garden: "498 m² Jardin",
       description: "La Villa 2 offre les volumes intérieurs les plus majestueux de l'ensemble du domaine. Conçue pour sublimer la lumière naturelle tout au long de la journée, elle dispose d'une triple exposition et d'espaces de vie exceptionnellement généreux avec de grandes ouvertures sur la terrasse et le jardin paysager.",
       features: [
         "Plus vaste surface construite du domaine : 376 m² de surface brute",
@@ -304,13 +304,13 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     3: {
       title: "Villa 3 – L'Écrin Sérénité (Lot 03)",
-      tagline: "Terrain généreux de 541 m² adossé à un écrin de verdure préservé",
+      tagline: "Terrain généreux de 530 m² adossé à un écrin de verdure préservé",
       surface_total: "370 m² SBP",
       surface_hab: "200 m² Habitable",
-      garden: "541 m² Jardin privatif",
-      description: "Nichée en bordure de zone végétale protégée, la Villa 3 allie élégance architecturale et calme absolu. Son jardin de 541 m² propose un équilibre parfait entre facilité d'entretien et espace de jeux ou de détente familiale sous les arbres majestueux de Trélex.",
+      garden: "530 m² Jardin",
+      description: "Nichée en bordure de zone végétale protégée, la Villa 3 allie élégance architecturale et calme absolu. Son jardin de 530 m² propose un équilibre parfait entre facilité d'entretien et espace de jeux ou de détente familiale sous les arbres majestueux de Trélex.",
       features: [
-        "Parcelle généreuse de 541 m² protégée par un cordon boisé",
+        "Parcelle généreuse de 530 m² protégée par un cordon boisé",
         "Atmosphère paisible et intimiste à l'écart de tout passage",
         "Distribution familiale optimale avec modularité intégrale de l'étage",
         "Espace de vie ouvert de plus de 65 m² avec cuisine d'architecte",
