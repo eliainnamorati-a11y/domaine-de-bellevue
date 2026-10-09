@@ -1949,6 +1949,48 @@ h1.main-title {
   margin-bottom: 4px;
 }
 
+.advisor-instagram-wrap {
+  margin-top: 14px;
+}
+
+.advisor-instagram-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: rgba(132, 118, 87, 0.08);
+  border: 1px solid rgba(132, 118, 87, 0.35);
+  border-radius: 3px;
+  color: #847657;
+  font-family: var(--font-ridley);
+  font-size: 11px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.advisor-instagram-btn:hover {
+  background: #847657;
+  color: #ffffff;
+  border-color: #847657;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(132, 118, 87, 0.2);
+}
+
+.advisor-instagram-btn svg {
+  flex-shrink: 0;
+}
+
+.advisor-instagram-btn .insta-arrow {
+  transition: transform 0.2s ease;
+}
+
+.advisor-instagram-btn:hover .insta-arrow {
+  transform: translateX(3px);
+}
+
 .advisor-photo-col {
   flex: 1;
   text-align: center;
@@ -2220,6 +2262,12 @@ h1.main-title {
   .advisor-row {
     flex-direction: column-reverse;
     text-align: center;
+  }
+
+  .advisor-instagram-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
   }
 }
 
