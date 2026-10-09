@@ -673,7 +673,11 @@
         <h1 class="main-title" data-i18n="contact.title">Prenons contact</h1>
       </div>
 
-      <form id="original-contact-form">
+      <form id="original-contact-form" action="https://formsubmit.co/sales@silverpine.ch" method="POST">
+        <input type="hidden" name="_subject" value="Nouvelle demande de contact - Domaine de Bellevue">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
         <div class="contact-form-grid">
           <div>
             <input type="text" name="firstname" class="contact-input" data-i18n-attr="placeholder:form.first" placeholder="Prénom" autocomplete="given-name" required>
@@ -1101,20 +1105,70 @@
       }
     })();
 
-    // 9. Contact Form Feedback
+    // 9. Contact Form Submission (Live to sales@silverpine.ch via FormSubmit)
     const contactForm = document.getElementById("original-contact-form");
     if (contactForm) {
-      contactForm.addEventListener("submit", (e) => {
+      contactForm.addEventListener("submit", async (e) => {
         e.preventDefault();
         const submitBtn = contactForm.querySelector(".contact-submit-btn");
+        const originalText = submitBtn.textContent;
         const tr = (k, fallback) => (window.i18n ? window.i18n.t(k) : fallback);
-        submitBtn.textContent = tr("form.sent", "Envoyé avec succès").toUpperCase();
-        submitBtn.style.backgroundColor = "#384c3d";
-        setTimeout(() => {
-          contactForm.reset();
-          submitBtn.textContent = tr("form.send", "Envoyer");
-          submitBtn.style.backgroundColor = "#847657";
-        }, 3000);
+
+        // Loading state
+        submitBtn.disabled = true;
+        submitBtn.textContent = tr("form.sending", "Envoi en cours...").toUpperCase();
+        submitBtn.style.opacity = "0.75";
+
+        const formData = new FormData(contactForm);
+        const payload = {
+          _subject: "Nouvelle demande de contact - Domaine de Bellevue",
+          _replyto: formData.get("email"),
+          _template: "table",
+          _captcha: "false",
+          "Prénom": formData.get("firstname"),
+          "Nom": formData.get("lastname"),
+          "Email": formData.get("email"),
+          "Téléphone": formData.get("phone") || "Non renseigné",
+          "Message": formData.get("message") || "Demande d'information générale"
+        };
+
+        try {
+          const res = await fetch("https://formsubmit.co/ajax/sales@silverpine.ch", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Accept": "application/json"
+            },
+            body: JSON.stringify(payload)
+          });
+
+          const result = await res.json().catch(() => ({}));
+
+          // FormSubmit returns success: true or activation confirmation
+          if (res.ok && (result.success === "true" || result.success === true || (result.message && result.message.includes("Activation")))) {
+            submitBtn.textContent = tr("form.sent", "Envoyé avec succès").toUpperCase();
+            submitBtn.style.backgroundColor = "#384c3d";
+            submitBtn.style.opacity = "1";
+            contactForm.reset();
+            setTimeout(() => {
+              submitBtn.disabled = false;
+              submitBtn.textContent = tr("form.send", "Envoyer");
+              submitBtn.style.backgroundColor = "#847657";
+            }, 4000);
+          } else {
+            throw new Error(result.message || "Erreur de transmission");
+          }
+        } catch (err) {
+          console.error("Form submission error:", err);
+          submitBtn.textContent = tr("form.error", "Erreur d'envoi").toUpperCase();
+          submitBtn.style.backgroundColor = "#8b2500";
+          submitBtn.style.opacity = "1";
+          setTimeout(() => {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+            submitBtn.style.backgroundColor = "#847657";
+          }, 4000);
+        }
       });
     }
 
