@@ -736,14 +736,10 @@ h1.main-title {
   z-index: 4;
 }
 
-.vam-pin-muted .vam-tag-res {
-  font-size: 8.5px;
-  color: #e5b974;
-}
-
+.vam-pin-muted .vam-tag-res,
 .vam-pin-muted .vam-tag-sold {
   font-size: 8.5px;
-  color: #9ea8a4;
+  color: #a0aba6;
 }
 
 .vam-caption {
@@ -1068,7 +1064,7 @@ h1.main-title {
 
 .stacked-specs-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
   flex: 1;
 }
@@ -1437,16 +1433,11 @@ h1.main-title {
   border: 1px solid rgba(56, 76, 61, 0.22);
 }
 
-.table-status-pill.reserved {
-  background: rgba(132, 118, 87, 0.10);
-  color: #847657;
-  border: 1px solid rgba(132, 118, 87, 0.22);
-}
-
+.table-status-pill.reserved,
 .table-status-pill.sold {
   background: rgba(120, 120, 120, 0.08);
   color: #888888;
-  border: 1px solid rgba(120, 120, 120, 0.16);
+  border: 1px solid rgba(120, 120, 120, 0.18);
 }
 
 .link-icon {
@@ -1799,6 +1790,11 @@ h1.main-title {
   min-height: 15px;
 }
 
+.brochure-subnote-empty {
+  visibility: hidden;
+  pointer-events: none;
+}
+
 /* ==========================================================================
    CONTACT FORM & ADVISOR
    ========================================================================== */
@@ -2025,7 +2021,7 @@ h1.main-title {
   }
 
   .stacked-specs-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .stacked-locator-box {
@@ -2278,20 +2274,22 @@ html, body {
   }
 
   .stacked-specs-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
   }
 
   .spec-tile {
-    padding: 10px 8px;
+    padding: 8px 4px;
+    text-align: center;
   }
 
   .spec-label {
-    font-size: 9px;
+    font-size: 8.5px;
+    letter-spacing: 0.5px;
   }
 
   .spec-val {
-    font-size: 13.5px;
+    font-size: 14px;
   }
 
   .stacked-locator-box {
@@ -2544,6 +2542,67 @@ html, body {
 
   .advisor-text-col img {
     max-height: 24px !important;
+  }
+
+  /* Compact Mobile Brochure Section */
+  #brochure {
+    padding: 24px 0 !important;
+  }
+
+  .brochure-row {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 0 16px !important;
+  }
+
+  .brochure-col {
+    width: 100% !important;
+    max-width: 280px !important;
+    min-height: 0 !important;
+    padding: 12px 14px 10px !important;
+    border: 1px solid #847657 !important;
+    border-radius: 4px !important;
+  }
+
+  .brochure-icon-wrap {
+    width: 22px !important;
+    height: 22px !important;
+    margin: 0 auto 3px !important;
+  }
+
+  .brochure-icon-wrap svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .brochure-col h4 {
+    font-size: 10px !important;
+    letter-spacing: 1.4px !important;
+    margin: 0 0 6px !important;
+  }
+
+  .brochure-btn {
+    width: 180px !important;
+    max-width: 100% !important;
+    height: 32px !important;
+    font-size: 9.5px !important;
+    letter-spacing: 0.8px !important;
+    padding: 0 8px !important;
+    border-radius: 2px !important;
+  }
+
+  .brochure-subnote,
+  .brochure-plans-note {
+    font-size: 8.5px !important;
+    letter-spacing: 0.5px !important;
+    margin-top: 5px !important;
+    min-height: 0 !important;
+    line-height: 1.2 !important;
+  }
+
+  .brochure-subnote-empty {
+    display: none !important;
   }
 }
 
