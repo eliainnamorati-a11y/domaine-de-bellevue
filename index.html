@@ -661,19 +661,19 @@
       <form id="original-contact-form">
         <div class="contact-form-grid">
           <div>
-            <input type="text" class="contact-input" data-i18n-attr="placeholder:form.first" placeholder="Prénom" required>
+            <input type="text" name="firstname" class="contact-input" data-i18n-attr="placeholder:form.first" placeholder="Prénom" autocomplete="given-name" required>
           </div>
           <div>
-            <input type="text" class="contact-input" data-i18n-attr="placeholder:form.last" placeholder="Nom" required>
+            <input type="text" name="lastname" class="contact-input" data-i18n-attr="placeholder:form.last" placeholder="Nom" autocomplete="family-name" required>
           </div>
           <div>
-            <input type="email" class="contact-input" placeholder="Email" required>
+            <input type="email" name="email" class="contact-input" placeholder="Email" autocomplete="email" required>
           </div>
           <div>
-            <input type="tel" class="contact-input" data-i18n-attr="placeholder:form.phone" placeholder="Téléphone">
+            <input type="tel" name="phone" class="contact-input" data-i18n-attr="placeholder:form.phone" placeholder="Téléphone" autocomplete="tel">
           </div>
           <div class="form-full">
-            <textarea class="contact-textarea" placeholder="Message"></textarea>
+            <textarea name="message" class="contact-textarea" placeholder="Message"></textarea>
           </div>
           <div class="contact-checkbox-wrap">
             <input type="checkbox" id="privacy-policy" required>
