@@ -71,7 +71,7 @@
       <a class="overlay-link" href="#architecture" data-i18n="nav.architecture">Architecture</a>
       <a class="overlay-link" href="#situation" data-i18n="nav.location">Situation</a>
       <a class="overlay-link" href="#lifestyle" data-i18n="nav.lifestyle">Art de vivre</a>
-      <a class="overlay-link" href="#brochure" data-i18n="nav.brochure">Brochure &amp; Plans</a>
+      <a class="overlay-link" href="#brochure" data-i18n="nav.brochure">Brochure</a>
       <a class="overlay-link" href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
   </div>
@@ -231,7 +231,7 @@
               </div>
             </div>
             <div class="triptych-item" data-i18n-attr="title:villa.zoom" title="Cliquer pour agrandir">
-              <img src="assets/villa-2-jardin.webp" data-i18n-attr="alt:v2.alt3" alt="Villa 2 - Jardin privatif de 499 m²" loading="lazy" decoding="async">
+              <img src="assets/le-project.webp" data-i18n-attr="alt:v2.alt3" alt="Villa 2 - Jardin privatif de 499 m²" loading="lazy" decoding="async">
               <span class="triptych-label" data-i18n="v2.img3">Jardin privatif 499 m²</span>
               <div class="triptych-zoom-btn">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
@@ -504,7 +504,7 @@
   </section>
 
   <div class="my-zoom-img">
-    <img src="assets/le-project.webp" data-i18n-attr="alt:project.alt" alt="Le Projet Domaine de Bellevue" loading="lazy" decoding="async">
+    <img src="assets/architecture-image05.webp" data-i18n-attr="alt:arch.alt" alt="Architecture &amp; Design de Prestige" loading="lazy" decoding="async">
   </div>
 
   <!-- ==========================================
@@ -661,15 +661,7 @@
           </div>
           <h4>BROCHURE</h4>
           <a href="docs/DOMAINE-DE-BELLEVUE-2026-1.pdf" target="_blank" data-i18n="dl">TÉLÉCHARGER</a>
-        </div>
-
-        <!-- Plans -->
-        <div class="brochure-col">
-          <div class="brochure-icon-wrap">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#847657" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-          </div>
-          <h4>PLANS</h4>
-          <a href="docs/Domaine-de-Bellevue-Plans.pdf" target="_blank" data-i18n="dl">TÉLÉCHARGER</a>
+          <span class="brochure-plans-note" data-i18n="brochure.plans_note">Plans disponibles sur demande</span>
         </div>
       </div>
     </div>
@@ -1065,7 +1057,7 @@
         const submitBtn = contactForm.querySelector(".contact-submit-btn");
         const tr = (k, fallback) => (window.i18n ? window.i18n.t(k) : fallback);
         submitBtn.textContent = tr("form.sent", "Envoyé avec succès").toUpperCase();
-        submitBtn.style.backgroundColor = "#2b3b2e";
+        submitBtn.style.backgroundColor = "#384c3d";
         setTimeout(() => {
           contactForm.reset();
           submitBtn.textContent = tr("form.send", "Envoyer");

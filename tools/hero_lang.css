@@ -36,7 +36,7 @@
 
 .hero-btn-simple:hover {
   background: #ffffff;
-  color: #2b3b2e;
+  color: #384c3d;
   border-color: #ffffff;
 }
 
@@ -122,7 +122,7 @@ body.menu-open .lang-btn {
 #domain-header.shrink .lang-btn.is-active,
 body.menu-open .lang-btn:hover,
 body.menu-open .lang-btn.is-active {
-  color: #2b3b2e;
+  color: #384c3d;
 }
 
 @media (max-width: 600px) {
