@@ -113,12 +113,35 @@
                srcset="assets/villas-disponibles-aerien-1200.webp 1200w, assets/villas-disponibles-aerien-2400.webp 2400w"
                sizes="(max-width: 1240px) 100vw, 1200px" loading="lazy" width="2400" height="1340"
                data-i18n-attr="alt:avail.map_alt" alt="Vue aérienne du Domaine de Bellevue : les Villas 1, 2 et 3 encore disponibles sont mises en évidence">
-          <a class="vam-pin" href="#villa-card-1" style="left:24.0%;top:42.5%;"><span class="vam-pin-word">Villa</span>1</a>
-          <a class="vam-pin" href="#villa-card-2" style="left:39.6%;top:35.8%;"><span class="vam-pin-word">Villa</span>2</a>
-          <a class="vam-pin" href="#villa-card-3" style="left:59.6%;top:42.5%;"><span class="vam-pin-word">Villa</span>3</a>
+          <!-- Available Villas: 1, 2, 3 with active interactive pins -->
+          <a class="vam-pin vam-pin-available" href="#villa-card-1" style="left:24.0%;top:42.5%;">
+            <span class="vam-pin-dot"></span>
+            <span class="vam-pin-title">Villa 1</span>
+            <span class="vam-pin-badge" data-i18n="avail.badge">Disponible</span>
+          </a>
+          <a class="vam-pin vam-pin-available" href="#villa-card-2" style="left:39.6%;top:35.8%;">
+            <span class="vam-pin-dot"></span>
+            <span class="vam-pin-title">Villa 2</span>
+            <span class="vam-pin-badge" data-i18n="avail.badge">Disponible</span>
+          </a>
+          <a class="vam-pin vam-pin-available" href="#villa-card-3" style="left:59.6%;top:42.5%;">
+            <span class="vam-pin-dot"></span>
+            <span class="vam-pin-title">Villa 3</span>
+            <span class="vam-pin-badge" data-i18n="avail.badge">Disponible</span>
+          </a>
+
+          <!-- Other lots: subtle indicators -->
+          <div class="vam-pin-muted" style="left:73.5%;top:35.8%;">Villa 4 · <span class="vam-tag-res" data-i18n="plan.reserved">Réservée</span></div>
+          <div class="vam-pin-muted" style="left:75.0%;top:67.0%;">Villa 5 · <span class="vam-tag-sold" data-i18n="plan.sold">Vendue</span></div>
+          <div class="vam-pin-muted" style="left:60.0%;top:67.0%;">Villa 6 · <span class="vam-tag-res" data-i18n="plan.reserved">Réservée</span></div>
+          <div class="vam-pin-muted" style="left:35.5%;top:67.0%;">Villa 7 · <span class="vam-tag-sold" data-i18n="plan.sold">Vendue</span></div>
+          <div class="vam-pin-muted" style="left:21.0%;top:67.0%;">Villa 8 · <span class="vam-tag-sold" data-i18n="plan.sold">Vendue</span></div>
         </div>
         <figcaption class="vam-caption">
-          <span class="vam-legend"><span class="vam-swatch" aria-hidden="true"></span><span data-i18n="avail.map_legend">Villas encore disponibles · Dès CHF 2,75M</span></span>
+          <div class="vam-legend-group">
+            <span class="vam-legend"><span class="vam-swatch available" aria-hidden="true"></span><span data-i18n="avail.map_legend">Villas 1, 2 &amp; 3 disponibles · Dès CHF 2,75M</span></span>
+            <span class="vam-legend muted"><span class="vam-swatch muted" aria-hidden="true"></span><span data-i18n="avail.map_legend_other">Autres lots réservés ou vendus</span></span>
+          </div>
           <span class="vam-hint" data-i18n="avail.map_hint">Cliquez sur une villa pour la découvrir</span>
         </figcaption>
       </figure>
@@ -178,8 +201,8 @@
                 <span class="spec-val">939 m²</span>
               </div>
               <div class="spec-tile">
-                <span class="spec-label" data-i18n="spec.features">Aménagements</span>
-                <span class="spec-val" data-i18n="spec.pool">Piscine réalisable</span>
+                <span class="spec-label" data-i18n="spec.basement">Sous-sol modulable</span>
+                <span class="spec-val">&gt; 100 m²</span>
               </div>
             </div>
             <div class="stacked-locator-box prominent" data-i18n-attr="title:loc.hint_title" title="Cliquer pour voir le tableau des disponibilités">
