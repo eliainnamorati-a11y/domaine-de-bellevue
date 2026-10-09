@@ -283,7 +283,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "4 à 5 suites parentales configurables en phase initiale",
         "Sous-sol complet de plus de 100 m² (salle de sport, spa, carnotzet ou cinéma)"
       ],
-      pdf: "docs/Domaine-de-Bellevue-Lot-1-.pdf"
+      pdf: "#contact"
     },
     2: {
       title: "Villa 2 – Le Volume Panorama (Lot 02)",
@@ -300,7 +300,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Master suite avec dressing sur mesure de 24 m² et salle de bain balnéo",
         "Accès direct au sous-sol aménagé avec lumière naturelle par cours anglaises"
       ],
-      pdf: "docs/Domaine-de-Bellevue-Lot-2.pdf"
+      pdf: "#contact"
     },
     3: {
       title: "Villa 3 – L'Écrin Sérénité (Lot 03)",
@@ -317,7 +317,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Possibilité d'aménager un carnotzet vaudois traditionnel ou une cave à vin de dégustation",
         "Finitions de haute facture personnalisables à 100% avec les architectes"
       ],
-      pdf: "docs/Domaine-de-Bellevue-Lot-3.pdf"
+      pdf: "#contact"
     }
   };
 
@@ -368,7 +368,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div style="display:flex; gap:14px; flex-wrap:wrap;">
         <a href="${data.pdf}" target="_blank" class="btn-primary" style="padding:12px 24px; font-size:0.8rem;">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-          Télécharger les Plans Détaillés (PDF)
+          Plans sur demande
         </a>
         <button onclick="selectVillaAndContact('${lotId}')" class="btn-outline" style="color:var(--color-primary-dark); border-color:var(--color-primary-dark); padding:12px 24px; font-size:0.8rem;">
           Organiser un Rendez-vous Privé
