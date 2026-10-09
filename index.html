@@ -66,7 +66,7 @@
   <div id="domain-overlay">
     <nav class="overlay-menu">
       <a class="overlay-link" href="#villas" data-i18n="nav.villas">Les Villas</a>
-      <a class="overlay-link" href="#plan" data-i18n="nav.plan">Plan &amp; Disponibilités</a>
+      <a class="overlay-link" href="#plan" data-i18n="nav.plan">Disponibilités</a>
       <a class="overlay-link" href="#projet" data-i18n="nav.project">Le Projet</a>
       <a class="overlay-link" href="#architecture" data-i18n="nav.architecture">Architecture</a>
       <a class="overlay-link" href="#situation" data-i18n="nav.location">Situation</a>
@@ -355,56 +355,30 @@
        ========================================== -->
   <section id="plan" class="section-regular text-center">
     <div class="container plan-container">
-      <h2 class="sub-title" data-i18n="plan.eyebrow">PLAN DU DOMAINE</h2>
-      <h1 class="main-title" data-i18n="plan.title">Disponibilités &amp; plan interactif</h1>
+      <h2 class="sub-title" data-i18n="plan.eyebrow">LE DOMAINE</h2>
+      <h1 class="main-title" data-i18n="plan.title">Tableau des disponibilités</h1>
 
-      <div class="interactive-section plane">
-        <!-- Col gauche: Masterplan interactif (Grand format proportionnel) -->
-        <div class="image-display" id="masterplan-wrapper">
-          <div class="map-stage" id="map-stage">
-            <img src="assets/atelier-project0.webp" data-i18n-attr="alt:plan.alt0" alt="Plan Général Domaine de Bellevue" class="active" id="plan-img-0" loading="lazy" decoding="async">
-            <img src="assets/atelier-project3.webp" data-i18n-attr="alt:plan.alt1" alt="Lot 1 (en haut à gauche - 939 m²)" id="plan-img-1" loading="lazy" decoding="async">
-            <img src="assets/atelier-project4.webp" alt="Lot 2" id="plan-img-2" loading="lazy" decoding="async">
-            <img src="assets/atelier-project5.webp" alt="Lot 3" id="plan-img-3" loading="lazy" decoding="async">
-            <img src="assets/atelier-project6.webp" alt="Lot 4" id="plan-img-4" loading="lazy" decoding="async">
-            <img src="assets/atelier-project1.webp" alt="Lot 5" id="plan-img-5" loading="lazy" decoding="async">
-            <img src="assets/atelier-project2.webp" alt="Lot 6" id="plan-img-6" loading="lazy" decoding="async">
-            <img src="assets/atelier-project7.webp" alt="Lot 7" id="plan-img-7" loading="lazy" decoding="async">
-            <img src="assets/atelier-project8.webp" alt="Lot 8" id="plan-img-8" loading="lazy" decoding="async">
-
-            <!-- Clean Transparent Hotspots (Hovering plan highlights the chart row) -->
-            <div class="map-hotspots-layer">
-              <div class="map-lot-hotspot" data-lot="1" style="left: 5.7%; top: 27.2%; width: 28.9%; height: 29.0%;" data-i18n-attr="title:loc.v1" title="Villa 1 • En haut à gauche"></div>
-              <div class="map-lot-hotspot" data-lot="2" style="left: 36.7%; top: 20.2%; width: 14.4%; height: 18.2%;" data-i18n-attr="title:loc.v2" title="Villa 2 • En haut au centre"></div>
-              <div class="map-lot-hotspot" data-lot="3" style="left: 49.9%; top: 17.0%; width: 14.3%; height: 17.0%;" data-i18n-attr="title:loc.v3" title="Villa 3 • En haut à droite"></div>
-              <div class="map-lot-hotspot" data-lot="4" style="left: 62.4%; top: 8.0%; width: 14.3%; height: 16.8%;" title="Villa 4"></div>
-              <div class="map-lot-hotspot" data-lot="5" style="left: 5.9%; top: 50.2%; width: 32.0%; height: 35.5%;" title="Villa 5"></div>
-              <div class="map-lot-hotspot" data-lot="6" style="left: 39.7%; top: 40.8%; width: 20.0%; height: 24.5%;" title="Villa 6"></div>
-              <div class="map-lot-hotspot" data-lot="7" style="left: 60.1%; top: 29.5%; width: 15.5%; height: 23.2%;" title="Villa 7"></div>
-              <div class="map-lot-hotspot" data-lot="8" style="left: 75.5%; top: 25.8%; width: 14.8%; height: 18.0%;" title="Villa 8"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Col droite: Tableau interactif avec tous les PDFs officiels -->
+      <div class="table-standalone-wrapper">
         <div class="table-container">
           <table class="interactive-table">
             <thead>
               <tr>
+                <th data-i18n="plan.th_villa">Villa</th>
                 <th data-i18n="plan.th_sbp">SBP totale</th>
-                <th data-i18n="plan.th_living">SBP habitable</th>
-                <th data-i18n="plan.th_garden">Jardin</th>
-                <th data-i18n="plan.th_price">Prix</th>
-                <th>Plans</th>
+                <th data-i18n="plan.th_living">Habitable</th>
+                <th data-i18n="plan.th_garden">Jardin privatif</th>
+                <th data-i18n="plan.th_status">Statut / Prix</th>
+                <th data-i18n="plan.th_plans">Plans</th>
               </tr>
             </thead>
             <tbody>
               <!-- LOT 1 (Available - PDF Included) -->
-              <tr data-img="1" class="row-available" id="table-row-1">
+              <tr data-lot="1" class="row-available" id="table-row-1">
+                <td class="cell-villa"><strong>Villa 1</strong></td>
                 <td>372 m²</td>
                 <td>198 m²</td>
                 <td>939 m²</td>
-                <td data-i18n="plan.request">Sur demande</td>
+                <td><span class="table-status-pill available" data-i18n="plan.status_v1">Disponible · Dès CHF 2,75M</span></td>
                 <td class="link-icon">
                   <a href="docs/Domaine-de-Bellevue-Lot-1-.pdf" target="_blank" data-i18n-attr="title:plan.pdf1" title="Plans officiels Lot 1">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#847657" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
@@ -413,11 +387,12 @@
               </tr>
 
               <!-- LOT 2 (Available - PDF Included) -->
-              <tr data-img="2" class="row-available" id="table-row-2">
+              <tr data-lot="2" class="row-available" id="table-row-2">
+                <td class="cell-villa"><strong>Villa 2</strong></td>
                 <td>376 m²</td>
                 <td>201 m²</td>
                 <td>499 m²</td>
-                <td data-i18n="plan.request">Sur demande</td>
+                <td><span class="table-status-pill available" data-i18n="plan.status_v2">Disponible · Dès CHF 2,75M</span></td>
                 <td class="link-icon">
                   <a href="docs/Domaine-de-Bellevue-Lot-2.pdf" target="_blank" data-i18n-attr="title:plan.pdf2" title="Plans officiels Lot 2">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#847657" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
@@ -426,11 +401,12 @@
               </tr>
 
               <!-- LOT 3 (Available - PDF Included) -->
-              <tr data-img="3" class="row-available" id="table-row-3">
+              <tr data-lot="3" class="row-available" id="table-row-3">
+                <td class="cell-villa"><strong>Villa 3</strong></td>
                 <td>370 m²</td>
                 <td>200 m²</td>
                 <td>541 m²</td>
-                <td data-i18n="plan.request">Sur demande</td>
+                <td><span class="table-status-pill available" data-i18n="plan.status_v3">Disponible · Dès CHF 2,75M</span></td>
                 <td class="link-icon">
                   <a href="docs/Domaine-de-Bellevue-Lot-3.pdf" target="_blank" data-i18n-attr="title:plan.pdf3" title="Plans officiels Lot 3">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#847657" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
@@ -439,55 +415,61 @@
               </tr>
 
               <!-- LOT 4 (Reserve - No PDF) -->
-              <tr data-img="4" id="table-row-4">
+              <tr data-lot="4" id="table-row-4">
+                <td class="cell-villa">Villa 4</td>
                 <td>374 m²</td>
                 <td>199 m²</td>
                 <td>782 m²</td>
-                <td data-i18n="plan.reserved">Réservée</td>
+                <td><span class="table-status-pill reserved" data-i18n="plan.reserved">Réservée</span></td>
                 <td class="link-icon">-</td>
               </tr>
 
               <!-- LOT 5 (Sold - No PDF) -->
-              <tr data-img="5" id="table-row-5">
+              <tr data-lot="5" id="table-row-5">
+                <td class="cell-villa">Villa 5</td>
                 <td>377 m²</td>
                 <td>200 m²</td>
                 <td>479 m²</td>
-                <td data-i18n="plan.sold">Vendue</td>
+                <td><span class="table-status-pill sold" data-i18n="plan.sold">Vendue</span></td>
                 <td class="link-icon">-</td>
               </tr>
 
               <!-- LOT 6 (Reserve - No PDF) -->
-              <tr data-img="6" id="table-row-6">
+              <tr data-lot="6" id="table-row-6">
+                <td class="cell-villa">Villa 6</td>
                 <td>370 m²</td>
                 <td>198 m²</td>
                 <td>330 m²</td>
-                <td data-i18n="plan.reserved">Réservée</td>
+                <td><span class="table-status-pill reserved" data-i18n="plan.reserved">Réservée</span></td>
                 <td class="link-icon">-</td>
               </tr>
 
               <!-- LOT 7 (Sold - No PDF) -->
-              <tr data-img="7" id="table-row-7">
+              <tr data-lot="7" id="table-row-7">
+                <td class="cell-villa">Villa 7</td>
                 <td>369 m²</td>
                 <td>198 m²</td>
                 <td>303 m²</td>
-                <td data-i18n="plan.sold">Vendue</td>
+                <td><span class="table-status-pill sold" data-i18n="plan.sold">Vendue</span></td>
                 <td class="link-icon">-</td>
               </tr>
 
               <!-- LOT 8 (Sold - No PDF) -->
-              <tr data-img="8" id="table-row-8">
+              <tr data-lot="8" id="table-row-8">
+                <td class="cell-villa">Villa 8</td>
                 <td>375 m²</td>
                 <td>200 m²</td>
                 <td>577 m²</td>
-                <td data-i18n="plan.sold">Vendue</td>
+                <td><span class="table-status-pill sold" data-i18n="plan.sold">Vendue</span></td>
                 <td class="link-icon">-</td>
               </tr>
             </tbody>
           </table>
 
-          <div class="table-footnote text-center" style="text-align:left; margin-top:16px;">
+          <div class="table-footnote text-left" style="text-align:left; margin-top:20px;">
             <p data-i18n="plan.note_sbp"><strong>SBP :</strong> Surface brute de plancher calculée selon les normes cantonales vaudoises.</p>
-            <p data-i18n="plan.disclaimer">Toutes les informations et visuels présentés sont non-contractuels et fournis à titre d’exemple. Le mobilier et finitions peuvent différer du projet final. Des modifications et adaptations restent réservées jusqu’à l’achèvement de la construction.</p>
+            <p data-i18n="plan.pool_permission" style="margin-top:6px;"><strong>Piscines :</strong> La réalisation d'une piscine privative est soumise à l'obtention préalable de l'autorisation de la commune.</p>
+            <p data-i18n="plan.disclaimer" style="margin-top:6px;">Toutes les informations, surfaces, plans et visuels présentés sont non-contractuels et fournis à titre indicatif. Des modifications et adaptations restent réservées jusqu’à l’achèvement de la construction.</p>
           </div>
         </div>
       </div>
@@ -776,7 +758,7 @@
   <footer id="site-footer">
     <div class="container">
       <p>© 2026 SILVERPINE AG &nbsp;|&nbsp; <a href="#" style="text-decoration:underline;" data-i18n="footer.privacy">Politique de confidentialité</a></p>
-      <p style="margin-top: 8px; font-size: 10.5px; opacity: 0.75;" data-i18n="footer.disclaimer">Toutes les informations, visuels, plans et surfaces présentés sur ce site sont non contractuels et fournis à titre indicatif.</p>
+      <p style="margin-top: 8px; font-size: 10.5px; opacity: 0.75;" data-i18n="footer.disclaimer">Toutes les informations, visuels, plans et surfaces présentés sur ce site sont non contractuels et fournis à titre indicatif. L’installation d’une piscine est soumise aux autorisations de la commune.</p>
     </div>
   </footer>
 
@@ -902,27 +884,10 @@
       targets.forEach(el => observer.observe(el));
     });
 
-    // 4. Interactive Masterplan & Two-Way Synchronized Hover
-    // Mapping:
-    // Lot 1 (Top Left, 939 m² plot) -> plan-img-1 (atelier-project3.webp)
-    // Lot 2 -> plan-img-2 (atelier-project4.webp)
-    // Lot 3 -> plan-img-3 (atelier-project5.webp)
-    // Lot 4 -> plan-img-4 (atelier-project6.webp)
-    // Lot 5 -> plan-img-5 (atelier-project1.webp)
-    // Lot 6 -> plan-img-6 (atelier-project2.webp)
-    // Lot 7 -> plan-img-7 (atelier-project7.webp)
-    // Lot 8 -> plan-img-8 (atelier-project8.webp)
+    // 4. Synchronized Table and Villa Card Interaction
     (function(){
       const rows = document.querySelectorAll(".interactive-table tbody tr");
-      const images = document.querySelectorAll(".map-stage img");
-      const hotspots = document.querySelectorAll(".map-lot-hotspot");
       const villaCards = document.querySelectorAll(".villa-stacked-block");
-
-      function showImage(index){
-        images.forEach((img, i) => {
-          img.classList.toggle("active", i === index);
-        });
-      }
 
       function highlightTableRow(lotNum, active){
         const row = document.getElementById("table-row-" + lotNum);
@@ -935,14 +900,11 @@
         }
       }
 
-      showImage(0);
-
-      // 1. Hover on table rows -> highlights map image & villa card above
+      // 1. Table rows hover & click
       rows.forEach(row => {
-        const lotNum = parseInt(row.dataset.img, 10);
+        const lotNum = parseInt(row.dataset.lot, 10);
         
         row.addEventListener("mouseenter", () => {
-          showImage(lotNum);
           if (lotNum >= 1 && lotNum <= 3) {
             const card = document.getElementById("villa-card-" + lotNum);
             if (card) card.classList.add("highlighted");
@@ -950,34 +912,19 @@
         });
 
         row.addEventListener("mouseleave", () => {
-          showImage(0);
           if (lotNum >= 1 && lotNum <= 3) {
             const card = document.getElementById("villa-card-" + lotNum);
             if (card) card.classList.remove("highlighted");
           }
         });
-      });
 
-      // 2. Hover on Map Hotspots -> HIGHLIGHTS THE CHART ROW & MAP IMAGE!
-      hotspots.forEach(hs => {
-        const lotNum = parseInt(hs.dataset.lot, 10);
-
-        hs.addEventListener("mouseenter", () => {
-          showImage(lotNum);
-          highlightTableRow(lotNum, true);
-        });
-
-        hs.addEventListener("mouseleave", () => {
-          showImage(0);
-          highlightTableRow(lotNum, false);
-        });
-
-        // Click on available lots (1, 2, 3) on the map scrolls up to the villa presentation
-        hs.addEventListener("click", () => {
+        // Click on available rows (1, 2, 3) scrolls up to the villa card
+        row.addEventListener("click", (e) => {
+          if (e.target.closest("a")) return;
           if (lotNum >= 1 && lotNum <= 3) {
             const card = document.getElementById("villa-card-" + lotNum);
             if (card) {
-              card.scrollIntoView({ behavior: "smooth", block: "center" });
+              card.scrollIntoView({ behavior: "smooth", block: "start" });
               card.classList.add("highlighted");
               setTimeout(() => card.classList.remove("highlighted"), 2500);
             }
@@ -985,17 +932,15 @@
         });
       });
 
-      // 3. Hover on Villa cards -> highlights masterplan map & chart row below
+      // 2. Hover on Villa cards -> highlights chart row below
       villaCards.forEach(card => {
         const lotNum = parseInt(card.dataset.lot, 10);
 
         card.addEventListener("mouseenter", () => {
-          showImage(lotNum);
           highlightTableRow(lotNum, true);
         });
 
         card.addEventListener("mouseleave", () => {
-          showImage(0);
           highlightTableRow(lotNum, false);
         });
       });

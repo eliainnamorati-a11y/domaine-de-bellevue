@@ -1215,15 +1215,26 @@ h1.main-title {
 }
 
 /* Col Droite: Refined, Compact Proportional Table */
-.table-container {
-  flex: 0 1 42%;
-  min-width: 400px;
+/* Standalone Centered Availability Chart */
+.table-standalone-wrapper {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.table-standalone-wrapper .table-container {
+  flex: none;
+  width: 100%;
+  max-width: 960px;
   background: #ffffff;
   border: 1px solid #ebe6df;
-  border-radius: 4px;
-  padding: 18px 20px;
-  box-shadow: 0 4px 20px rgba(43, 59, 46, 0.04);
+  border-radius: 6px;
+  padding: 24px 28px;
+  box-shadow: 0 8px 30px rgba(43, 59, 46, 0.05);
   box-sizing: border-box;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .interactive-table {
@@ -1231,15 +1242,15 @@ h1.main-title {
   table-layout: fixed;
   border-collapse: collapse;
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 13.5px;
 }
 
 .interactive-table th {
-  padding: 10px 4px;
+  padding: 12px 6px;
   font-weight: 600;
   font-family: var(--font-ridley);
   font-size: 10.5px;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
   color: #847657;
   border-bottom: 2px solid #847657;
@@ -1247,14 +1258,15 @@ h1.main-title {
   white-space: nowrap;
 }
 
-.interactive-table th:nth-child(1) { width: 20%; }
-.interactive-table th:nth-child(2) { width: 22%; }
-.interactive-table th:nth-child(3) { width: 18%; }
-.interactive-table th:nth-child(4) { width: 24%; }
-.interactive-table th:nth-child(5) { width: 16%; }
+.interactive-table th:nth-child(1) { width: 14%; text-align: left; padding-left: 14px; }
+.interactive-table th:nth-child(2) { width: 16%; }
+.interactive-table th:nth-child(3) { width: 16%; }
+.interactive-table th:nth-child(4) { width: 16%; }
+.interactive-table th:nth-child(5) { width: 26%; }
+.interactive-table th:nth-child(6) { width: 12%; }
 
 .interactive-table td {
-  padding: 10px 4px;
+  padding: 12px 6px;
   text-align: center;
   border-bottom: 1px solid #eee9e0;
   color: #2b3b2e;
@@ -1265,26 +1277,66 @@ h1.main-title {
   cursor: pointer;
 }
 
-.interactive-table tbody tr.row-available td {
-  font-weight: 600;
+.interactive-table td.cell-villa {
+  text-align: left;
+  padding-left: 14px;
+  font-family: var(--font-serif);
+  font-size: 15px;
   color: #1e2c21;
 }
 
-/* Dual Highlight Styling (Hovering Table OR Hovering Plan) */
+.interactive-table tbody tr.row-available td {
+  font-weight: 500;
+  color: #1e2c21;
+}
+
 .interactive-table tbody tr:hover td,
 .interactive-table tbody tr.highlighted td,
 .interactive-table tbody tr.active td {
-  background: rgba(132, 118, 87, 0.18) !important;
+  background: rgba(132, 118, 87, 0.12) !important;
   color: #2b3b2e !important;
 }
 
 .interactive-table tbody tr.row-available:hover td,
 .interactive-table tbody tr.row-available.highlighted td {
-  background: rgba(132, 118, 87, 0.25) !important;
+  background: rgba(132, 118, 87, 0.18) !important;
 }
 
 .interactive-table tbody tr.highlighted td:first-child {
   border-left: 3px solid #847657;
+}
+
+/* Status Pills */
+.table-status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-family: var(--font-ridley);
+  font-size: 10px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.table-status-pill.available {
+  background: rgba(43, 59, 46, 0.08);
+  color: #2b3b2e;
+  border: 1px solid rgba(43, 59, 46, 0.22);
+}
+
+.table-status-pill.reserved {
+  background: rgba(132, 118, 87, 0.10);
+  color: #847657;
+  border: 1px solid rgba(132, 118, 87, 0.22);
+}
+
+.table-status-pill.sold {
+  background: rgba(120, 120, 120, 0.08);
+  color: #888888;
+  border: 1px solid rgba(120, 120, 120, 0.16);
 }
 
 .link-icon {
@@ -1308,10 +1360,14 @@ h1.main-title {
 }
 
 .table-footnote {
-  margin: 12px 0 0;
-  font-size: 12px;
-  color: #777;
-  line-height: 1.55em;
+  margin: 16px 0 0;
+  font-size: 11.5px;
+  color: #6b6b6b;
+  line-height: 1.6em;
+}
+
+.table-footnote p {
+  margin: 0;
 }
 
 /* ==========================================================================
@@ -2138,13 +2194,18 @@ html, body {
   }
 
   .interactive-table {
-    min-width: 460px;
+    min-width: 580px;
     font-size: 11.5px;
   }
 
   .interactive-table th, .interactive-table td {
-    padding: 8px 6px;
+    padding: 9px 5px;
     font-size: 11.5px;
+  }
+
+  .interactive-table td.cell-villa {
+    font-size: 13px;
+    padding-left: 8px;
   }
 
   /* Contact Form Mobile Inputs */
