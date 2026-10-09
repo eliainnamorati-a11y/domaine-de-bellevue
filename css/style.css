@@ -1711,28 +1711,38 @@ h1.main-title {
 .brochure-row {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  align-items: stretch;
+  gap: 32px;
   text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 .brochure-col {
   flex: 1;
   max-width: 320px;
+  min-height: 220px;
   border: 1px solid #847657;
-  padding: 24px 16px;
+  padding: 28px 20px 22px;
   background: #ffffff;
   transition: all 0.3s ease;
-  border-radius: 2px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .brochure-col:hover {
   background: rgba(132, 118, 87, 0.05);
+  border-color: #384c3d;
 }
 
 .brochure-icon-wrap {
   width: 40px;
   height: 40px;
-  margin: 0 auto 12px;
+  margin: 0 auto 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1745,27 +1755,48 @@ h1.main-title {
   letter-spacing: 1.8px;
   text-transform: uppercase;
   color: #847657;
-  margin-bottom: 6px;
+  margin: 0 0 16px;
 }
 
-.brochure-col a {
+.brochure-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  max-width: 100%;
+  height: 44px;
+  padding: 0 16px;
+  border: 1px solid #384c3d;
+  background: #ffffff;
+  color: #384c3d !important;
   font-family: var(--font-ridley);
   font-size: 11px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.3px;
   text-transform: uppercase;
-  color: #000000;
-  text-decoration: underline;
+  text-decoration: none !important;
+  font-weight: 600;
+  border-radius: 3px;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+  text-align: center;
 }
 
+.brochure-btn:hover {
+  background: #384c3d;
+  color: #ffffff !important;
+}
+
+.brochure-subnote,
 .brochure-plans-note {
   display: block;
-  margin-top: 10px;
+  margin-top: 12px;
   font-family: var(--font-ridley);
   font-size: 10.5px;
   letter-spacing: 0.8px;
   text-transform: uppercase;
   color: #847657;
   line-height: 1.4;
+  min-height: 15px;
 }
 
 /* ==========================================================================
@@ -2019,10 +2050,11 @@ h1.main-title {
   .table-container {
     width: 100%;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .interactive-table {
-    min-width: 580px;
+    width: 100%;
   }
 
   .scroll-item {
@@ -2305,28 +2337,166 @@ html, body {
     line-height: 1.1;
   }
 
-  /* Interactive Table Mobile Fix */
+  /* Interactive Table Mobile Card View */
+  .table-standalone-wrapper {
+    width: 100%;
+    padding: 0;
+  }
+
   .table-container {
     width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    border-radius: 6px;
-    border: 1px solid rgba(56, 76, 61, 0.12);
+    overflow: visible !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
   }
 
   .interactive-table {
-    min-width: 580px;
-    font-size: 11.5px;
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    border: none !important;
   }
 
-  .interactive-table th, .interactive-table td {
-    padding: 9px 5px;
-    font-size: 11.5px;
+  .interactive-table thead {
+    display: none !important;
+  }
+
+  .interactive-table tbody {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+
+  .interactive-table tbody tr {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-template-areas:
+      "villa status status"
+      "sbp living garden" !important;
+    row-gap: 10px !important;
+    column-gap: 6px !important;
+    padding: 12px 14px 12px !important;
+    border: 1px solid #ebe6df !important;
+    border-radius: 8px !important;
+    background: #ffffff !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 2px 8px rgba(56, 76, 61, 0.04) !important;
+    text-align: left !important;
+    transition: all 0.2s ease !important;
+    cursor: pointer !important;
+  }
+
+  .interactive-table tbody tr.row-available {
+    border-color: rgba(56, 76, 61, 0.35) !important;
+    border-left: 4px solid #384c3d !important;
+  }
+
+  .interactive-table tbody tr.row-available:hover,
+  .interactive-table tbody tr.row-available.highlighted,
+  .interactive-table tbody tr.row-available.active {
+    background: rgba(132, 118, 87, 0.08) !important;
+    border-color: #847657 !important;
+  }
+
+  .interactive-table td {
+    padding: 0 !important;
+    border: none !important;
+    text-align: left !important;
+    white-space: normal !important;
+    background: transparent !important;
   }
 
   .interactive-table td.cell-villa {
-    font-size: 13px;
-    padding-left: 8px;
+    grid-area: villa !important;
+    font-family: var(--font-serif) !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #1e2c21 !important;
+    padding-left: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .interactive-table td.cell-status {
+    grid-area: status !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+  }
+
+  .interactive-table td.cell-sbp {
+    grid-area: sbp !important;
+  }
+
+  .interactive-table td.cell-living {
+    grid-area: living !important;
+  }
+
+  .interactive-table td.cell-garden {
+    grid-area: garden !important;
+  }
+
+  .interactive-table td.cell-sbp,
+  .interactive-table td.cell-living,
+  .interactive-table td.cell-garden {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #fbf9f6 !important;
+    border-radius: 4px !important;
+    padding: 6px 3px !important;
+    text-align: center !important;
+    font-size: 11.5px !important;
+    font-weight: 600 !important;
+    color: #384c3d !important;
+  }
+
+  .interactive-table td.cell-sbp::before {
+    content: "SBP";
+    display: block;
+    font-family: var(--font-ridley);
+    font-size: 8.5px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #847657;
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+
+  .interactive-table td.cell-living::before {
+    content: "Habitable";
+    display: block;
+    font-family: var(--font-ridley);
+    font-size: 8.5px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #847657;
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+
+  .interactive-table td.cell-garden::before {
+    content: "Jardin";
+    display: block;
+    font-family: var(--font-ridley);
+    font-size: 8.5px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #847657;
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+
+  html[lang="en"] .interactive-table td.cell-living::before {
+    content: "Living";
+  }
+
+  html[lang="en"] .interactive-table td.cell-garden::before {
+    content: "Garden";
   }
 
   /* Contact Form Mobile Inputs */
@@ -2494,4 +2664,293 @@ html, body {
 
 .vam-frame:hover img {
   transform: scale(1.015) !important;
+}
+
+/* ==========================================================================
+   COOKIE CONSENT BANNER
+   ========================================================================== */
+.cookie-banner {
+  position: fixed;
+  bottom: -180px;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 16px 24px;
+  background: rgba(30, 44, 33, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(132, 118, 87, 0.35);
+  box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.25);
+  color: #f7f5f0;
+  transition: bottom 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cookie-banner.visible {
+  bottom: 0;
+}
+
+.cookie-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.cookie-text-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1 1 500px;
+}
+
+.cookie-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #dfd7c5;
+  flex-shrink: 0;
+}
+
+.cookie-text {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.5;
+  color: #ebe7df;
+}
+
+.cookie-privacy-btn {
+  background: none;
+  border: none;
+  padding: 0 0 0 6px;
+  color: #dfd7c5;
+  font-family: var(--font-ridley);
+  font-size: 11px;
+  text-decoration: underline;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  display: inline;
+}
+
+.cookie-privacy-btn:hover {
+  color: #ffffff;
+}
+
+.cookie-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.cookie-btn {
+  padding: 9px 20px;
+  font-family: var(--font-ridley);
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.cookie-btn-decline {
+  background: transparent;
+  border: 1px solid rgba(223, 215, 197, 0.4);
+  color: #dfd7c5;
+}
+
+.cookie-btn-decline:hover {
+  border-color: #dfd7c5;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.cookie-btn-accept {
+  background: #384c3d;
+  border: 1px solid #847657;
+  color: #ffffff;
+}
+
+.cookie-btn-accept:hover {
+  background: #465f4d;
+  border-color: #dfd7c5;
+}
+
+@media (max-width: 680px) {
+  .cookie-banner {
+    padding: 14px 16px;
+  }
+  .cookie-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .cookie-text-wrap {
+    flex: 1 1 auto;
+  }
+  .cookie-actions {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+  }
+  .cookie-btn {
+    flex: 1;
+    text-align: center;
+    padding: 10px 8px;
+    font-size: 10.5px;
+  }
+}
+
+/* ==========================================================================
+   PRIVACY POLICY MODAL
+   ========================================================================== */
+.privacy-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.privacy-modal.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.privacy-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 28, 22, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.privacy-dialog {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 680px;
+  max-height: 85vh;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #ebe6df;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: modalPop 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalPop {
+  from { transform: scale(0.94) translateY(12px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.privacy-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid #eee9e0;
+  background: #faf8f5;
+}
+
+.privacy-title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 20px;
+  color: #1e2c21;
+  font-weight: 500;
+}
+
+.privacy-close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  line-height: 1;
+  color: #847657;
+  cursor: pointer;
+  padding: 0 4px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.privacy-close-btn:hover {
+  color: #1e2c21;
+  transform: scale(1.1);
+}
+
+.privacy-body {
+  padding: 24px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  color: #384c3d;
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  line-height: 1.65;
+}
+
+.privacy-body h3 {
+  font-family: var(--font-ridley);
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #847657;
+  margin: 18px 0 6px;
+}
+
+.privacy-body h3:first-child {
+  margin-top: 0;
+}
+
+.privacy-body p {
+  margin: 0 0 12px;
+}
+
+.privacy-body a {
+  color: #384c3d;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.privacy-footer {
+  padding: 14px 24px;
+  border-top: 1px solid #eee9e0;
+  background: #faf8f5;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.privacy-ok-btn {
+  padding: 8px 24px;
+  background: #384c3d;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  font-family: var(--font-ridley);
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.privacy-ok-btn:hover {
+  background: #465f4d;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
