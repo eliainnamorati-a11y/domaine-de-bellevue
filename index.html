@@ -7,6 +7,15 @@
   <title>Domaine de Bellevue | Villas de Luxe près de Nyon</title>
   <meta name="description" content="Nouveau projet immobilier de luxe à Trélex, près de Nyon et Genève : villas neuves de prestige, design contemporain et cadre privilégié. Dernières disponibilités : Villas 1, 2 et 3.">
   
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZLFS2FT7T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BZLFS2FT7T');
+  </script>
+
   <link rel="icon" type="image/svg+xml" href="assets/domaine-de-bellevue-logo_LOGO.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1201,12 +1210,19 @@
           banner.classList.add("visible");
           banner.setAttribute("aria-hidden", "false");
         }, 800);
+      } else if (consent === "declined" && typeof gtag === "function") {
+        gtag("consent", "update", { "analytics_storage": "denied" });
       }
 
       function hideBanner(choice) {
         localStorage.setItem(STORAGE_KEY, choice);
         banner.classList.remove("visible");
         banner.setAttribute("aria-hidden", "true");
+        if (typeof gtag === "function") {
+          gtag("consent", "update", {
+            "analytics_storage": choice === "accepted" ? "granted" : "denied"
+          });
+        }
       }
 
       if (btnAccept) {
