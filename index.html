@@ -827,7 +827,7 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01"/><path d="M7.5 15.5v.01"/><path d="M12 12v.01"/><path d="M16 16v.01"/></svg>
         </span>
         <p class="cookie-text">
-          <span data-i18n="cookie.text">Ce site utilise des cookies essentiels pour assurer son bon fonctionnement et garantir une navigation fluide. En continuant, vous acceptez leur utilisation.</span>
+          <span data-i18n="cookie.text">Ce site utilise des cookies essentiels et des outils de mesure pour assurer son bon fonctionnement et évaluer l’efficacité de nos campagnes. Vous pouvez accepter ou refuser les outils de mesure.</span>
           <button type="button" class="cookie-privacy-btn" id="cookie-policy-btn" data-i18n="cookie.privacy_link">En savoir plus</button>
         </p>
       </div>
@@ -852,11 +852,11 @@
         <h3>1. Responsable du traitement</h3>
         <p>Silverpine SA, société suisse sise en Suisse, est responsable du traitement des données personnelles collectées via le présent site Internet (contact : <a href="mailto:sales@silverpine.ch">sales@silverpine.ch</a>).</p>
         <h3>2. Données collectées et finalités</h3>
-        <p>Nous collectons uniquement les informations que vous nous transmettez volontairement via le formulaire de contact (nom, prénom, e-mail, téléphone, message). Ces données sont exclusivement utilisées pour répondre à votre demande d’information ou convenir d’un rendez-vous concernant le Domaine de Bellevue.</p>
-        <h3>3. Confidentialité &amp; transmission</h3>
-        <p>Vos données personnelles ne sont en aucun cas vendues, louées ou cédées à des tiers à des fins publicitaires. Elles sont traitées de manière strictement confidentielle par Silverpine SA et ses partenaires directement impliqués dans la commercialisation du projet.</p>
-        <h3>4. Cookies</h3>
-        <p>Le site utilise uniquement des cookies techniques indispensables à la navigation (mémorisation de vos préférences de langue et de consentement) ainsi que des statistiques de fréquentation anonymisées. Vous pouvez à tout moment refuser ou supprimer les cookies via votre navigateur.</p>
+        <p>Nous collectons les données transmises volontairement via le formulaire de contact (nom, prénom, e-mail, téléphone, message). Ces données sont exclusivement utilisées pour répondre à votre demande d’information, organiser des visites et assurer le suivi personnalisé concernant le Domaine de Bellevue.</p>
+        <h3>3. Confidentialité &amp; sous-traitants</h3>
+        <p>Vos données personnelles ne sont jamais vendues ou cédées à des tiers à des fins publicitaires non liées au projet. Elles sont traitées de manière strictement confidentielle par Silverpine SA, ses prestataires techniques et ses partenaires directement impliqués dans la commercialisation du Domaine de Bellevue.</p>
+        <h3>4. Cookies et outils de mesure (Google &amp; Meta)</h3>
+        <p>Le site utilise des cookies essentiels au fonctionnement ainsi que des outils de mesure d’audience et de performance publicitaire (Google Analytics et Meta Pixel / Instagram). Dans le cadre de la mesure d’efficacité de nos campagnes et de la correspondance avancée de Meta, certaines données de contact fournies lors d’une demande peuvent être transmises de manière pseudonymisée et chiffrée (hachage cryptographique irréversible SHA-256) afin d’attribuer les conversions et d’optimiser la diffusion de nos annonces. Vous pouvez à tout moment accepter ou refuser ces traceurs via notre bandeau de consentement ou dans les paramètres de votre navigateur.</p>
         <h3>5. Vos droits (LPD)</h3>
         <p>Conformément à la Loi fédérale suisse sur la protection des données (LPD), vous disposez à tout moment d’un droit d’accès, de rectification et d’effacement de vos données personnelles. Pour exercer ces droits, vous pouvez nous contacter directement à <a href="mailto:sales@silverpine.ch">sales@silverpine.ch</a>.</p>
       </div>
@@ -1232,8 +1232,13 @@
           banner.classList.add("visible");
           banner.setAttribute("aria-hidden", "false");
         }, 800);
-      } else if (consent === "declined" && typeof gtag === "function") {
-        gtag("consent", "update", { "analytics_storage": "denied" });
+      } else if (consent === "declined") {
+        if (typeof gtag === "function") {
+          gtag("consent", "update", { "analytics_storage": "denied" });
+        }
+        if (typeof fbq === "function") {
+          fbq("consent", "revoke");
+        }
       }
 
       function hideBanner(choice) {
@@ -1244,6 +1249,9 @@
           gtag("consent", "update", {
             "analytics_storage": choice === "accepted" ? "granted" : "denied"
           });
+        }
+        if (typeof fbq === "function") {
+          fbq("consent", choice === "accepted" ? "grant" : "revoke");
         }
       }
 
