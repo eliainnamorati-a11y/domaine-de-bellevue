@@ -1799,16 +1799,17 @@ h1.main-title {
 .brochure-col {
   flex: 1;
   max-width: 320px;
-  min-height: 220px;
+  min-height: 195px;
   border: 1px solid #847657;
-  padding: 28px 20px 22px;
+  padding: 26px 20px 22px;
   background: #ffffff;
   transition: all 0.3s ease;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 14px;
   box-sizing: border-box;
 }
 
@@ -1820,7 +1821,7 @@ h1.main-title {
 .brochure-icon-wrap {
   width: 40px;
   height: 40px;
-  margin: 0 auto 10px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1833,7 +1834,7 @@ h1.main-title {
   letter-spacing: 1.8px;
   text-transform: uppercase;
   color: #847657;
-  margin: 0 0 16px;
+  margin: 0;
 }
 
 .brochure-btn {
@@ -2032,6 +2033,24 @@ h1.main-title {
 
 .advisor-text-col {
   flex: 2;
+}
+
+h2.advisor-eyebrow,
+.advisor-text-col .advisor-eyebrow {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.advisor-logo-wrap {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.advisor-logo-wrap img {
+  max-height: 34px;
+  width: auto;
 }
 
 .advisor-text-col p {
@@ -2363,6 +2382,17 @@ h1.main-title {
   .advisor-row {
     flex-direction: column-reverse;
     text-align: center;
+  }
+
+  h2.advisor-eyebrow,
+  .advisor-text-col .advisor-eyebrow,
+  .advisor-eyebrow {
+    text-align: center !important;
+  }
+
+  .advisor-logo-wrap {
+    justify-content: center;
+    margin-bottom: 16px;
   }
 
   .advisor-instagram-wrap {
@@ -2904,7 +2934,20 @@ html, body {
     object-fit: contain !important;
   }
 
-  .advisor-text-col img {
+  h2.advisor-eyebrow,
+  .advisor-text-col .advisor-eyebrow,
+  .advisor-eyebrow {
+    text-align: center !important;
+  }
+
+  .advisor-logo-wrap {
+    justify-content: center !important;
+    text-align: center !important;
+    margin-bottom: 14px !important;
+  }
+
+  .advisor-logo-wrap img {
+    margin: 0 auto !important;
     max-height: 24px !important;
   }
 
