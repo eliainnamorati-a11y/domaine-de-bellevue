@@ -972,11 +972,17 @@ h1.main-title {
   border-radius: 2px;
   transition: all 0.25s ease;
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
 }
 
 .villa-btn-pdf-stacked:hover {
   background: #384c3d;
   border-color: #384c3d;
+  color: #ffffff;
 }
 
 /* 3 Images Side-by-Side (NO SCROLLING) */
