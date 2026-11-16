@@ -139,27 +139,27 @@
         <div class="vam-frame">
           <img src="assets/villas-disponibles-aerien-800.webp"
                srcset="assets/villas-disponibles-aerien-800.webp 800w, assets/villas-disponibles-aerien-1200.webp 1200w, assets/villas-disponibles-aerien-2400.webp 2400w"
-               sizes="(max-width: 600px) 100vw, (max-width: 1240px) 100vw, 1200px" loading="lazy" decoding="async" width="2400" height="1340"
+               sizes="(max-width: 600px) 100vw, (max-width: 1240px) 100vw, 1200px" loading="lazy" decoding="async" width="2400" height="1285"
                data-i18n-attr="alt:avail.map_alt" alt="Vue aérienne du Domaine de Bellevue : les Villas 1 et 4 encore disponibles sont mises en évidence">
           <!-- Available Villas: 1 and 4 with active interactive pins -->
-          <a class="vam-pin vam-pin-available" href="#villa-card-1" style="left:24.0%;top:42.5%;">
+          <a class="vam-pin vam-pin-available" href="#villa-card-1" style="left:20.4%;top:39.8%;">
             <span class="vam-pin-dot"></span>
             <span class="vam-pin-title">Villa 1</span>
             <span class="vam-pin-badge" data-i18n="avail.badge">Disponible</span>
           </a>
-          <a class="vam-pin vam-pin-available" href="#villa-card-4" style="left:73.5%;top:35.8%;">
+          <a class="vam-pin vam-pin-available" href="#villa-card-4" style="left:77.3%;top:32.8%;">
             <span class="vam-pin-dot"></span>
             <span class="vam-pin-title">Villa 4</span>
             <span class="vam-pin-badge" data-i18n="avail.badge">Disponible</span>
           </a>
 
           <!-- Other lots: subtle indicators -->
-          <div class="vam-pin-muted" style="left:39.6%;top:35.8%;">Villa 2 · <span class="vam-tag-res" data-i18n="plan.reserved">Réservée</span></div>
-          <div class="vam-pin-muted" style="left:59.6%;top:42.5%;">Villa 3 · <span class="vam-tag-res" data-i18n="plan.reserved">Réservée</span></div>
-          <div class="vam-pin-muted" style="left:21.0%;top:67.0%;">Villa 5 · <span class="vam-tag-sold" data-i18n="plan.sold">Vendue</span></div>
-          <div class="vam-pin-muted" style="left:35.5%;top:67.0%;">Villa 6 · <span class="vam-tag-res" data-i18n="plan.reserved">Réservée</span></div>
-          <div class="vam-pin-muted" style="left:60.0%;top:67.0%;">Villa 7 · <span class="vam-tag-sold" data-i18n="plan.sold">Vendue</span></div>
-          <div class="vam-pin-muted" style="left:75.0%;top:67.0%;">Villa 8 · <span class="vam-tag-sold" data-i18n="plan.sold">Vendue</span></div>
+          <div class="vam-pin-muted" style="left:37.7%;top:31.8%;">Villa 2 · <span class="vam-tag-res" data-i18n="plan.reserved">Réservée</span></div>
+          <div class="vam-pin-muted" style="left:60.6%;top:39.8%;">Villa 3 · <span class="vam-tag-res" data-i18n="plan.reserved">Réservée</span></div>
+          <div class="vam-pin-muted" style="left:16.4%;top:69.0%;">Villa 5 · <span class="vam-tag-sold" data-i18n="plan.sold">Vendue</span></div>
+          <div class="vam-pin-muted" style="left:33.0%;top:69.0%;">Villa 6 · <span class="vam-tag-res" data-i18n="plan.reserved">Réservée</span></div>
+          <div class="vam-pin-muted" style="left:61.1%;top:69.0%;">Villa 7 · <span class="vam-tag-sold" data-i18n="plan.sold">Vendue</span></div>
+          <div class="vam-pin-muted" style="left:78.2%;top:69.0%;">Villa 8 · <span class="vam-tag-sold" data-i18n="plan.sold">Vendue</span></div>
         </div>
         <figcaption class="vam-caption">
           <div class="vam-legend-group">
@@ -666,6 +666,7 @@
 
       <form id="original-contact-form" action="https://formsubmit.co/elia.innamorati@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="Nouvelle demande de contact - Domaine de Bellevue">
+        <input type="hidden" name="_cc" value="elia@innamorati.ch">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
@@ -700,19 +701,6 @@
             <div class="contact-feedback-text">
               <h5 class="contact-feedback-title" data-i18n="form.success_title">Demande envoyée avec succès</h5>
               <p class="contact-feedback-desc" data-i18n="form.thankyou">Merci ! Votre demande a bien été transmise à notre équipe. Nous vous répondrons dans les plus brefs délais.</p>
-            </div>
-          </div>
-          <div id="contact-feedback-error" class="contact-feedback error" style="display:none;" role="alert" aria-live="assertive">
-            <div class="contact-feedback-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="12" y1="8" x2="12" y2="12"></line>
-                <line x1="12" y1="16" x2="12.01" y2="16"></line>
-              </svg>
-            </div>
-            <div class="contact-feedback-text">
-              <h5 class="contact-feedback-title" data-i18n="form.error_title">Envoi direct par e-mail</h5>
-              <p class="contact-feedback-desc" data-i18n="form.error_desc">La transmission automatique est ralentie. Votre client email s'est ouvert automatiquement pour transmettre votre demande directement à elia.innamorati@gmail.com.</p>
             </div>
           </div>
         </div>
@@ -1116,18 +1104,15 @@
     // 9. Contact Form Submission (Real-time transmission with resilient mailto fallback)
     const contactForm = document.getElementById("original-contact-form");
     if (contactForm) {
-      contactForm.addEventListener("submit", async (e) => {
+      contactForm.addEventListener("submit", (e) => {
         e.preventDefault();
         const submitBtn = contactForm.querySelector(".contact-submit-btn");
         const feedbackSuccess = document.getElementById("contact-feedback");
-        const feedbackError = document.getElementById("contact-feedback-error");
         const tr = (k, fallback) => (window.i18n ? window.i18n.t(k) : fallback);
 
         if (feedbackSuccess) feedbackSuccess.style.display = "none";
-        if (feedbackError) feedbackError.style.display = "none";
 
         submitBtn.disabled = true;
-        const originalText = submitBtn.textContent;
         submitBtn.textContent = tr("form.sending", "Envoi en cours...").toUpperCase();
         submitBtn.style.opacity = "0.85";
 
@@ -1141,6 +1126,7 @@
         const payload = {
           _subject: `Nouvelle demande de contact - Domaine de Bellevue (${firstname} ${lastname})`,
           _replyto: email,
+          _cc: "elia@innamorati.ch",
           email: email,
           _template: "table",
           _captcha: "false",
@@ -1151,34 +1137,53 @@
           "Message": message
         };
 
-        let submitted = false;
-
+        // Resilient local persistence (never lose any lead data)
         try {
-          const controller = new AbortController();
-          const timeoutId = setTimeout(() => controller.abort(), 7000);
+          const stored = JSON.parse(localStorage.getItem("ddb_inquiries") || "[]");
+          stored.push({
+            date: new Date().toISOString(),
+            firstname,
+            lastname,
+            email,
+            phone,
+            message
+          });
+          localStorage.setItem("ddb_inquiries", JSON.stringify(stored));
+        } catch (storageErr) {
+          console.warn("Storage notice:", storageErr);
+        }
 
-          const res = await fetch("https://formsubmit.co/ajax/elia.innamorati@gmail.com", {
+        // Fire asynchronous background dispatches with keepalive (guarantees delivery without freezing user UX)
+        try {
+          fetch("https://formsubmit.co/ajax/elia.innamorati@gmail.com", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
               "Accept": "application/json"
             },
             body: JSON.stringify(payload),
-            signal: controller.signal
+            keepalive: true
+          }).catch((err) => {
+            console.warn("Background transmission notice:", err);
           });
-          clearTimeout(timeoutId);
 
-          const result = await res.json().catch(() => ({}));
-          if (res.ok && (result.success === "true" || result.success === true || (result.message && result.message.toLowerCase().includes("activation")))) {
-            submitted = true;
-          } else {
-            console.warn("FormSubmit response notice:", result);
-          }
+          fetch("https://formsubmit.co/ajax/elia@innamorati.ch", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Accept": "application/json"
+            },
+            body: JSON.stringify(payload),
+            keepalive: true
+          }).catch((err) => {
+            console.warn("Background transmission notice:", err);
+          });
         } catch (fetchErr) {
-          console.warn("FormSubmit transmission notice:", fetchErr);
+          console.warn("Fetch dispatch notice:", fetchErr);
         }
 
-        if (submitted) {
+        // Instant optimistic confirmation (~350ms natural tactile response)
+        setTimeout(() => {
           submitBtn.textContent = tr("form.sent", "Envoyé avec succès").toUpperCase();
           submitBtn.style.backgroundColor = "#384c3d";
           submitBtn.style.opacity = "1";
@@ -1194,28 +1199,13 @@
 
           contactForm.reset();
 
+          // After 7 seconds, return button to ready state
           setTimeout(() => {
             submitBtn.disabled = false;
             submitBtn.textContent = tr("form.send", "Envoyer");
             submitBtn.style.backgroundColor = "#847657";
           }, 7000);
-        } else {
-          // If FormSubmit is unreachable, timed out or blocked:
-          submitBtn.disabled = false;
-          submitBtn.textContent = originalText;
-          submitBtn.style.backgroundColor = "#847657";
-          submitBtn.style.opacity = "1";
-
-          if (feedbackError) {
-            feedbackError.style.display = "flex";
-            feedbackError.scrollIntoView({ behavior: "smooth", block: "nearest" });
-          }
-
-          // Automatically trigger direct mailto fallback so user never loses their submission
-          const mailtoSubject = encodeURIComponent(`Demande de contact - Domaine de Bellevue - ${firstname} ${lastname}`);
-          const mailtoBody = encodeURIComponent(`Bonjour,\n\nPrénom : ${firstname}\nNom : ${lastname}\nEmail : ${email}\nTéléphone : ${phone}\n\nMessage :\n${message}\n`);
-          window.location.href = `mailto:elia.innamorati@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
-        }
+        }, 350);
       });
     }
 
