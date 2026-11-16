@@ -14,13 +14,13 @@ document.addEventListener("DOMContentLoaded", () => {
       nav_situation: "Situation",
       nav_contact: "Contact",
       btn_inquire: "Prendre Rendez-vous",
-      hero_badge: "Dernières 3 Opportunités • Disponibilité 2027",
+      hero_badge: "Dernières 2 Opportunités • Disponibilité 2027",
       hero_title_1: "L'Équilibre Parfait",
       hero_title_2: "entre Style et Sérénité",
-      hero_sub: "Un ensemble d'exception sur les hauteurs paisibles de Trélex, près de Nyon et Genève. Seulement 3 villas de prestige encore disponibles.",
-      hero_status_sold: "5 Villas Déjà Vendues",
-      hero_status_avail: "Villas 1, 2 & 3 Disponibles",
-      hero_cta_villas: "Découvrir les 3 Dernières Villas",
+      hero_sub: "Un ensemble d'exception sur les hauteurs paisibles de Trélex, près de Nyon et Genève. Seulement 2 villas de prestige encore disponibles.",
+      hero_status_sold: "6 Villas Vendues ou Réservées",
+      hero_status_avail: "Villas 1 & 4 Disponibles",
+      hero_cta_villas: "Découvrir les 2 Dernières Villas",
       hero_cta_custom: "Personnaliser votre Villa",
       banner_tag: "Opportunité Rare",
       banner_text: "Phase initiale de construction : Personnalisez librement vos aménagements et finitions intérieures.",
@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
       proj_p2: "Nichées dans un écrin de verdure, chaque bien est conçu pour un art de vivre contemporain : volumes lumineux, terrasses privées spacieuses et modularité intelligente.",
       
       sig_label: "COLLECTION SIGNATURE",
-      sig_heading: "Pourquoi les Villas 1, 2 et 3 sont les joyaux du Domaine",
-      sig_desc: "Dernières disponibilités du projet, ces 3 villas occupent les parcelles les plus prisées et spacieuses du domaine, justifiant leur standing supérieur.",
+      sig_heading: "Pourquoi les Villas 1 et 4 sont les joyaux du Domaine",
+      sig_desc: "Dernières disponibilités du projet, ces 2 villas occupent les parcelles les plus prisées et spacieuses du domaine, justifiant leur standing supérieur.",
       
       custom_label: "SUR MESURE",
       custom_heading: "Personnalisation Intégrale en Phase Initiale",
@@ -63,13 +63,13 @@ document.addEventListener("DOMContentLoaded", () => {
       nav_situation: "Location",
       nav_contact: "Contact",
       btn_inquire: "Book a Viewing",
-      hero_badge: "Final 3 Opportunities • Delivery 2027",
+      hero_badge: "Final 2 Opportunities • Delivery 2027",
       hero_title_1: "The Perfect Balance",
       hero_title_2: "between Style and Serenity",
-      hero_sub: "A rare private estate in the tranquil heights of Trélex, close to Nyon and Geneva. Only 3 prime luxury villas remain available.",
-      hero_status_sold: "5 Villas Already Sold",
-      hero_status_avail: "Villas 1, 2 & 3 Available",
-      hero_cta_villas: "Explore the Final 3 Villas",
+      hero_sub: "A rare private estate in the tranquil heights of Trélex, close to Nyon and Geneva. Only 2 prime luxury villas remain available.",
+      hero_status_sold: "6 Villas Sold or Reserved",
+      hero_status_avail: "Villas 1 & 4 Available",
+      hero_cta_villas: "Explore the Final 2 Villas",
       hero_cta_custom: "Customize Your Villa",
       banner_tag: "Rare Opportunity",
       banner_text: "Early construction phase: Freely tailor your interior layout and high-end finishes with the architect.",
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
       proj_p2: "Surrounded by nature, each home is crafted for contemporary living: generous double-height volumes, panoramic terraces, and intuitive modularity.",
 
       sig_label: "SIGNATURE COLLECTION",
-      sig_heading: "Why Villas 1, 2 and 3 are the Crown Jewels",
+      sig_heading: "Why Villas 1 and 4 are the Crown Jewels",
       sig_desc: "The final available properties occupy the estate's largest and most elevated parcels, justifying their premier positioning.",
 
       custom_label: "BESPOKE DESIGN",
@@ -177,16 +177,14 @@ document.addEventListener("DOMContentLoaded", () => {
       currentPinnedImg = imgIndex;
       showPlanImage(imgIndex);
       
-      // If clicking villa 1, 2, or 3, highlight its showcase card smoothly
-      if (imgIndex >= 1 && imgIndex <= 3) {
-        const targetCard = document.getElementById(`villa-card-${imgIndex}`);
-        if (targetCard) {
-          targetCard.scrollIntoView({ behavior: "smooth", block: "center" });
-          targetCard.classList.add("featured");
-          setTimeout(() => {
-            if (imgIndex !== 1) targetCard.classList.remove("featured");
-          }, 2500);
-        }
+      // If clicking a villa with an active showcase card (e.g. Villa 1 or 4), highlight smoothly
+      const targetCard = document.getElementById(`villa-card-${imgIndex}`);
+      if (targetCard) {
+        targetCard.scrollIntoView({ behavior: "smooth", block: "center" });
+        targetCard.classList.add("featured");
+        setTimeout(() => {
+          if (imgIndex !== 1) targetCard.classList.remove("featured");
+        }, 2500);
       }
     });
   });
@@ -318,6 +316,23 @@ document.addEventListener("DOMContentLoaded", () => {
         "Finitions de haute facture personnalisables à 100% avec les architectes"
       ],
       pdf: "docs/Domaine-de-Bellevue-Plans-Lot-3.pdf"
+    },
+    4: {
+      title: "Villa 4 – L'Écrin Panoramique (Lot 04)",
+      tagline: "Vaste parcelle privative de 782 m² en lisière du domaine avec exposition optimale",
+      surface_total: "374 m² SBP",
+      surface_hab: "199 m² Habitable",
+      garden: "782 m² Jardin",
+      description: "Située en bordure de propriété dans un calme absolu, la Villa 4 bénéficie d'un vaste jardin arboré de 782 m². Ses pièces de réception lumineuses s'ouvrent harmonieusement sur la terrasse ensoleillée et la verdure environnante, alliant modernité architecturale et intimité d'exception.",
+      features: [
+        "L'un des plus grands jardins du domaine avec 782 m² d'espace privatif",
+        "Position privilégiée en lisière garantissant tranquillité et discrétion",
+        "Espace extérieur généreux permettant l'aménagement d'une piscine privative",
+        "Séjour traversant baigné de lumière naturelle avec accès terrasse plain-pied",
+        "4 à 5 suites personnalisables selon vos exigences avec les architectes",
+        "Sous-sol complet modulable (wellness, home cinema, fitness ou cave à vin)"
+      ],
+      pdf: "docs/Domaine-de-Bellevue-Plans-Lot-4.pdf"
     }
   };
 

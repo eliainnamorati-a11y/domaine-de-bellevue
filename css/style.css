@@ -2021,6 +2021,28 @@ h1.main-title {
   }
 }
 
+.contact-feedback.error {
+  background: #fdf5f4;
+  border-left-color: #8b2500;
+  box-shadow: 0 2px 12px rgba(139, 37, 0, 0.08);
+}
+
+.contact-feedback.error .contact-feedback-icon {
+  color: #8b2500;
+}
+
+.contact-feedback.error .contact-feedback-icon svg {
+  stroke: #8b2500;
+}
+
+.contact-feedback.error .contact-feedback-title {
+  color: #8b2500;
+}
+
+.contact-feedback.error .contact-feedback-desc {
+  color: #4a2014;
+}
+
 /* Conseiller & Silverpine */
 .advisor-row {
   display: flex;
