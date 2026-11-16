@@ -664,7 +664,7 @@
         <h1 class="main-title" data-i18n="contact.title">Prenons contact</h1>
       </div>
 
-      <form id="original-contact-form" action="https://formsubmit.co/sales@silverpine.ch" method="POST">
+      <form id="original-contact-form" action="https://formsubmit.co/elia.innamorati@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="Nouvelle demande de contact - Domaine de Bellevue">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
@@ -712,7 +712,7 @@
             </div>
             <div class="contact-feedback-text">
               <h5 class="contact-feedback-title" data-i18n="form.error_title">Envoi direct par e-mail</h5>
-              <p class="contact-feedback-desc" data-i18n="form.error_desc">La transmission automatique est ralentie. Votre client email s'est ouvert automatiquement pour transmettre votre demande directement à sales@silverpine.ch.</p>
+              <p class="contact-feedback-desc" data-i18n="form.error_desc">La transmission automatique est ralentie. Votre client email s'est ouvert automatiquement pour transmettre votre demande directement à elia.innamorati@gmail.com.</p>
             </div>
           </div>
         </div>
@@ -1157,7 +1157,7 @@
           const controller = new AbortController();
           const timeoutId = setTimeout(() => controller.abort(), 7000);
 
-          const res = await fetch("https://formsubmit.co/ajax/sales@silverpine.ch", {
+          const res = await fetch("https://formsubmit.co/ajax/elia.innamorati@gmail.com", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -1214,7 +1214,7 @@
           // Automatically trigger direct mailto fallback so user never loses their submission
           const mailtoSubject = encodeURIComponent(`Demande de contact - Domaine de Bellevue - ${firstname} ${lastname}`);
           const mailtoBody = encodeURIComponent(`Bonjour,\n\nPrénom : ${firstname}\nNom : ${lastname}\nEmail : ${email}\nTéléphone : ${phone}\n\nMessage :\n${message}\n`);
-          window.location.href = `mailto:sales@silverpine.ch?subject=${mailtoSubject}&body=${mailtoBody}`;
+          window.location.href = `mailto:elia.innamorati@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
         }
       });
     }
