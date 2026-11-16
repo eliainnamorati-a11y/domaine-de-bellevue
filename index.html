@@ -609,57 +609,47 @@
        ========================================== -->
   <section id="contact">
     <div class="container contact-layout">
-      <div class="text-center">
+      <div class="text-center contact-header-block">
+        <h2 class="sub-title" data-i18n="advisor.eyebrow">Conseil et vente</h2>
         <h1 class="main-title" data-i18n="contact.title">Prenons contact</h1>
+        <p class="contact-subtitle" data-i18n="contact.subtitle">Pour toute demande d’information, recevoir le dossier complet ou organiser une visite privée sur place, contactez directement notre équipe.</p>
       </div>
 
-      <form id="original-contact-form" action="https://formsubmit.co/elia.innamorati@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="Nouvelle demande de contact - Domaine de Bellevue">
-        <input type="hidden" name="_cc" value="elia@innamorati.ch">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://www.domaine-de-bellevue.ch/?submitted=true#contact">
-        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-        <div class="contact-form-grid">
-          <div>
-            <input type="text" name="firstname" class="contact-input" data-i18n-attr="placeholder:form.first" placeholder="Prénom" autocomplete="given-name" required>
+      <!-- High-Focus Direct Contact Hub (Phone & Email) -->
+      <div class="direct-contact-grid">
+        <!-- Phone Card -->
+        <a href="tel:+41793954958" class="direct-contact-card" aria-label="Téléphone +41 79 395 49 58">
+          <div class="direct-contact-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
           </div>
-          <div>
-            <input type="text" name="lastname" class="contact-input" data-i18n-attr="placeholder:form.last" placeholder="Nom" autocomplete="family-name" required>
+          <div class="direct-contact-body">
+            <span class="direct-contact-label" data-i18n="contact.phone_label">Ligne directe</span>
+            <span class="direct-contact-value">+41 79 395 49 58</span>
+            <span class="direct-contact-action"><span data-i18n="contact.phone_action">Appeler maintenant</span> <span class="arrow" aria-hidden="true">→</span></span>
           </div>
-          <div>
-            <input type="email" name="email" class="contact-input" placeholder="Email" autocomplete="email" required>
+        </a>
+
+        <!-- Email Card -->
+        <a href="mailto:sales@silverpine.ch?subject=Demande%20d%27information%20-%20Domaine%20de%20Bellevue" class="direct-contact-card" aria-label="Email sales@silverpine.ch">
+          <div class="direct-contact-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
           </div>
-          <div>
-            <input type="tel" name="phone" class="contact-input" data-i18n-attr="placeholder:form.phone" placeholder="Téléphone" autocomplete="tel">
+          <div class="direct-contact-body">
+            <span class="direct-contact-label" data-i18n="contact.email_label">Email direct</span>
+            <span class="direct-contact-value">sales@silverpine.ch</span>
+            <span class="direct-contact-action"><span data-i18n="contact.email_action">Écrire un message</span> <span class="arrow" aria-hidden="true">→</span></span>
           </div>
-          <div class="form-full">
-            <textarea name="message" class="contact-textarea" placeholder="Message"></textarea>
-          </div>
-          <div class="contact-checkbox-wrap">
-            <input type="checkbox" id="privacy-policy" required>
-            <label for="privacy-policy" data-i18n="form.privacy">J’accepte la <a href="#" class="open-privacy-trigger" style="color:inherit;text-decoration:underline;">politique de confidentialité</a></label>
-          </div>
-          <button type="submit" class="contact-submit-btn" data-i18n="form.send">Envoyer</button>
-          <div id="contact-feedback" class="contact-feedback" style="display:none;" role="status" aria-live="polite">
-            <div class="contact-feedback-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-              </svg>
-            </div>
-            <div class="contact-feedback-text">
-              <h5 class="contact-feedback-title" data-i18n="form.success_title">Demande envoyée avec succès</h5>
-              <p class="contact-feedback-desc" data-i18n="form.thankyou">Merci ! Votre demande a bien été transmise à notre équipe. Nous vous répondrons dans les plus brefs délais.</p>
-            </div>
-          </div>
-        </div>
-      </form>
+        </a>
+      </div>
 
       <!-- Conseil et vente (Silverpine SA & Daniel Meister) -->
       <div class="advisor-row">
         <div class="advisor-text-col">
-          <h2 class="sub-title advisor-eyebrow" data-i18n="advisor.eyebrow">Conseil et vente</h2>
           <div class="advisor-logo-wrap">
             <img src="assets/SILVERPINE.webp" alt="Silverpine SA" loading="lazy" decoding="async" width="450" height="63">
           </div>
@@ -854,7 +844,7 @@
       const targets = document.querySelectorAll(
         ".sub-title, .main-title, .section-text, .villas-availability-map, " +
         ".villa-stacked-block, .triptych-item, .my-zoom-img, .interactive-section, " +
-        ".distanz-table, .scroll-item, .brochure-card, .advisor-row, .contact-form-block"
+        ".distanz-table, .scroll-item, .brochure-card, .advisor-row, .direct-contact-card"
       );
 
       targets.forEach(el => {
@@ -1051,143 +1041,23 @@
       }
     })();
 
-    // 9. Contact Form Submission (Real-time transmission with resilient mailto fallback)
-    const contactForm = document.getElementById("original-contact-form");
-    if (contactForm) {
-      contactForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const submitBtn = contactForm.querySelector(".contact-submit-btn");
-        const feedbackSuccess = document.getElementById("contact-feedback");
-        const tr = (k, fallback) => (window.i18n ? window.i18n.t(k) : fallback);
-
-        if (feedbackSuccess) feedbackSuccess.style.display = "none";
-
-        submitBtn.disabled = true;
-        submitBtn.textContent = tr("form.sending", "Envoi en cours...").toUpperCase();
-        submitBtn.style.opacity = "0.85";
-
-        const formData = new FormData(contactForm);
-        const firstname = (formData.get("firstname") || "").toString().trim();
-        const lastname = (formData.get("lastname") || "").toString().trim();
-        const email = (formData.get("email") || "").toString().trim();
-        const phone = (formData.get("phone") || "").toString().trim() || "Non renseigné";
-        const message = (formData.get("message") || "").toString().trim() || "Demande d'information générale";
-
-        const payload = {
-          _subject: `Nouvelle demande de contact - Domaine de Bellevue (${firstname} ${lastname})`,
-          _replyto: email,
-          _cc: "elia@innamorati.ch",
-          email: email,
-          _template: "table",
-          _captcha: "false",
-          "Prénom": firstname,
-          "Nom": lastname,
-          "Email": email,
-          "Téléphone": phone,
-          "Message": message
-        };
-
-        // Resilient local persistence (never lose any lead data)
-        try {
-          const stored = JSON.parse(localStorage.getItem("ddb_inquiries") || "[]");
-          stored.push({
-            date: new Date().toISOString(),
-            firstname,
-            lastname,
-            email,
-            phone,
-            message
-          });
-          localStorage.setItem("ddb_inquiries", JSON.stringify(stored));
-        } catch (storageErr) {
-          console.warn("Storage notice:", storageErr);
-        }
-
-        // Automated Google Sheets Collector Webhook URL
-        const GOOGLE_SHEETS_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbxsiCufTtalWFgF6PoYn285DNZGp845S4mXO4HIb1gQw5vyXr96A1s-qM4j4-sw_iPE/exec";
-
-        // 1. Dispatch to Google Sheets Collector (Auto-appends to live spreadsheet + triggers direct Gmail)
-        if (GOOGLE_SHEETS_WEBHOOK_URL) {
-          try {
-            fetch(GOOGLE_SHEETS_WEBHOOK_URL, {
-              method: "POST",
-              mode: "no-cors",
-              headers: {
-                "Content-Type": "text/plain;charset=utf-8"
-              },
-              body: JSON.stringify({
-                firstname: firstname,
-                lastname: lastname,
-                email: email,
-                phone: phone,
-                message: message,
-                lang: (typeof currentLang !== "undefined" ? currentLang : "FR"),
-                url: window.location.href
-              }),
-              keepalive: true
-            }).catch((err) => {
-              console.warn("Google Sheets dispatch notice:", err);
+    // 9. Direct Contact Action Tracking (Phone & Email)
+    (function(){
+      const contactCards = document.querySelectorAll(".direct-contact-card, .advisor-links a");
+      contactCards.forEach(card => {
+        card.addEventListener("click", () => {
+          if (typeof fbq === "function") {
+            fbq("track", "Contact");
+          }
+          if (typeof gtag === "function") {
+            gtag("event", "generate_lead", {
+              event_category: "Contact",
+              event_label: card.getAttribute("href") || "Direct Contact"
             });
-          } catch (sheetErr) {
-            console.warn("Google Sheets dispatch error:", sheetErr);
           }
-        }
-
-        // 2. Dispatch to FormSubmit email relay
-        try {
-          fetch("https://formsubmit.co/ajax/elia.innamorati@gmail.com", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              "Accept": "application/json"
-            },
-            body: JSON.stringify(payload),
-            keepalive: true
-          }).catch((err) => {
-            console.warn("Background transmission notice:", err);
-          });
-
-          fetch("https://formsubmit.co/ajax/elia@innamorati.ch", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              "Accept": "application/json"
-            },
-            body: JSON.stringify(payload),
-            keepalive: true
-          }).catch((err) => {
-            console.warn("Background transmission notice:", err);
-          });
-        } catch (fetchErr) {
-          console.warn("Fetch dispatch notice:", fetchErr);
-        }
-
-        // Instant optimistic confirmation (~350ms natural tactile response)
-        setTimeout(() => {
-          submitBtn.textContent = tr("form.sent", "Envoyé avec succès").toUpperCase();
-          submitBtn.style.backgroundColor = "#384c3d";
-          submitBtn.style.opacity = "1";
-
-          if (feedbackSuccess) {
-            feedbackSuccess.style.display = "flex";
-            feedbackSuccess.scrollIntoView({ behavior: "smooth", block: "nearest" });
-          }
-
-          if (typeof fbq === 'function') {
-            fbq('track', 'Lead');
-          }
-
-          contactForm.reset();
-
-          // After 7 seconds, return button to ready state
-          setTimeout(() => {
-            submitBtn.disabled = false;
-            submitBtn.textContent = tr("form.send", "Envoyer");
-            submitBtn.style.backgroundColor = "#847657";
-          }, 7000);
-        }, 350);
+        });
       });
-    }
+    })();
 
     // 10. Cookie Consent Banner
     (function(){
