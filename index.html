@@ -1102,7 +1102,37 @@
           console.warn("Storage notice:", storageErr);
         }
 
-        // Fire asynchronous background dispatches with keepalive (guarantees delivery without freezing user UX)
+        // Automated Google Sheets Collector Webhook URL
+        const GOOGLE_SHEETS_WEBHOOK_URL = "";
+
+        // 1. Dispatch to Google Sheets Collector (Auto-appends to live spreadsheet + triggers direct Gmail)
+        if (GOOGLE_SHEETS_WEBHOOK_URL) {
+          try {
+            fetch(GOOGLE_SHEETS_WEBHOOK_URL, {
+              method: "POST",
+              mode: "no-cors",
+              headers: {
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify({
+                firstname: firstname,
+                lastname: lastname,
+                email: email,
+                phone: phone,
+                message: message,
+                lang: (typeof currentLang !== "undefined" ? currentLang : "FR"),
+                url: window.location.href
+              }),
+              keepalive: true
+            }).catch((err) => {
+              console.warn("Google Sheets dispatch notice:", err);
+            });
+          } catch (sheetErr) {
+            console.warn("Google Sheets dispatch error:", sheetErr);
+          }
+        }
+
+        // 2. Dispatch to FormSubmit email relay
         try {
           fetch("https://formsubmit.co/ajax/elia.innamorati@gmail.com", {
             method: "POST",
